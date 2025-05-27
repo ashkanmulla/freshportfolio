@@ -4,51 +4,65 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1.0" />
   <title>Lucy AI Assistant 🤖</title>
-  <link rel="stylesheet" href="style.css" />
+
+  <!-- Google Font -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <!-- Font Awesome (icons) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <!-- External CSS -->
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+
   <div class="chat-container">
-    <!-- Header -->
-    <div class="header">
-      <div class="bot-avatar">🤖</div>
-      <h1>Lucy AI Assistant</h1>
-      <p>Hi there! 👋 I'm Lucy, Rishi's intelligent personal assistant. I'm here to help you learn more about Rishi's skills, projects, and achievements. Feel free to ask me anything!</p>
-    </div>
 
-    <!-- Action Buttons -->
-    <div class="action-buttons">
-      <button class="action-btn search-btn" onclick="handleSearchInternet()">
-        🌐 Search with Internet
-      </button>
-      <button class="action-btn reasoning-btn" onclick="handleReasoning()">
-        🧠 Advanced Reasoning
-      </button>
-    </div>
+    <!-- ⬅️ History Sidebar -->
+    <aside class="sidebar history-sidebar">
+      <h2 class="sidebar-title">📜 History</h2>
+      <ul id="history-list" class="history-list"></ul>
+    </aside>
 
-    <!-- Quick Reply Chips -->
-    <div class="chips-section">
-      <div class="chips-title">💡 Quick Questions</div>
+    <!-- 🟦 Main Chat Column -->
+    <section class="main-column">
+
+      <!-- Header -->
+      <div class="header">
+        <div class="bot-avatar">
+          <!-- अपनी PNG फ़ोटो इस नाम से रखें -->
+          <img src="my-photo.png" alt="My Photo" />
+        </div>
+        <h1>Lucy AI Assistant</h1>
+        <p>Hi there! 👋 I'm Lucy, Rishi's intelligent personal assistant. Ask me anything!</p>
+      </div>
+
+      <!-- Chat thread -->
+      <div id="chat-area" class="chat-area"></div>
+
+      <!-- Input + tool-buttons -->
+      <div class="input-section">
+        <form id="message-form" class="input-container">
+          <div class="input-tools">
+            <button type="button" class="tool-btn" title="Search with Internet"  onclick="handleSearchInternet(this)"><i class="fas fa-globe"></i></button>
+            <button type="button" class="tool-btn" title="Advanced Reasoning"     onclick="handleReasoning(this)"><i class="fas fa-brain"></i></button>
+            <button type="button" class="tool-btn" title="Upload File"            onclick="handleUploadFile(this)"><i class="fas fa-upload"></i></button>
+            <button type="button" class="tool-btn" title="Deep Think"             onclick="handleDeepThink(this)"><i class="fas fa-lightbulb"></i></button>
+          </div>
+
+          <input id="message-input" class="message-input" placeholder="Type your question here…" autocomplete="off" />
+          <button type="submit" class="send-btn">Send 🚀</button>
+        </form>
+      </div>
+    </section>
+
+    <!-- ➡️ Quick Questions Sidebar -->
+    <aside class="sidebar suggestion-sidebar">
+      <h2 class="sidebar-title">💡 Quick Questions</h2>
       <div id="chips-container" class="chips-container"></div>
-    </div>
+    </aside>
 
-    <!-- Chat Area -->
-    <div id="chat-area" class="chat-area"></div>
-
-    <!-- Input Section -->
-    <div class="input-section">
-      <form id="message-form" class="input-container">
-        <input 
-          id="message-input" 
-          class="message-input" 
-          placeholder="Type your question here..." 
-          autocomplete="off"
-        />
-        <button type="submit" class="send-btn">Send 🚀</button>
-      </form>
-    </div>
   </div>
 
+  <!-- External JS -->
   <script src="lucy.js"></script>
 </body>
 </html>

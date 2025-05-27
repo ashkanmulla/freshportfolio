@@ -1,129 +1,132 @@
-// === Data Store ===
+/* ======================================================================
+   lucy.js – Deep-Think pipeline
+   ====================================================================== */
+
+/* ---------- Static data (Quick-reply) -------------------------------- */
 const DATA = {
-  "who is rishi?": "Rishi Raj Sharma is a passionate full-stack developer and AI enthusiast with expertise in building scalable web applications and intelligent systems. He combines technical excellence with creative problem-solving to deliver innovative solutions.",
-  "what are rishi's skills?": "🔧 **Technical Skills:** Python, FastAPI, LangChain, React.js, Node.js, PostgreSQL, MongoDB, AWS, Docker, Kubernetes, Machine Learning, Deep Learning, and DevOps practices.",
-  "what are rishi's projects?": "🚀 **Key Projects:** Professional portfolio website, full-stack e-commerce platform, AI-powered resume matcher, interactive data dashboards, and several open-source contributions to the developer community.",
-  "what are rishi's achievements?": "🏆 **Notable Achievements:** Finalist at HackTheVerse 2024, Kaggle competition medalist, received Spot Award at Acme Corp for exceptional performance, and recognized as a top contributor in multiple tech communities.",
-  "what are rishi's certifications?": "📜 **Certifications:** AWS Solutions Architect Associate, Google Data Analytics Professional Certificate, DeepLearning.AI Specialization, and various other industry-recognized credentials.",
-  "how can i contact rishi?": "📧 **Contact Information:** Email: rishi@example.com | LinkedIn: linkedin.com/in/rishi-raj | GitHub: github.com/rishi-raj | Feel free to reach out for collaborations or opportunities!",
-  "what are rishi's industry experiences?": "💼 **Industry Experience:** Extensive work in Fin-Tech solutions, retail forecasting systems, Gen-AI HR chatbots, and enterprise-level application development across various domains.",
-  "what are rishi's career interests?": "🎯 **Career Focus:** Applied Large Language Models, AI agents development, product strategy, technical mentoring, and building innovative solutions that bridge AI and real-world applications."
+  "who is rishi?": "Rishi Raj Sharma is a passionate full-stack developer and AI enthusiast.",
+  "what are rishi's skills?": "🔧 Skills: Python, FastAPI, LangChain, React, Node, PostgreSQL, MongoDB, AWS, Docker, Kubernetes, ML, DevOps.",
+  "what are rishi's projects?": "🚀 Projects: Portfolio, e-commerce, AI resume-matcher, dashboards, OSS libs.",
+  "what are rishi's achievements?": "🏆 Achievements: HackTheVerse finalist, Kaggle medalist, Spot Award at Acme Corp.",
+  "what are rishi's certifications?": "📜 Certifications: AWS SAA, Google Data Analytics, DeepLearning.AI.",
+  "how can i contact rishi?": "📧 Contact: rishi@example.com  |  LinkedIn  |  GitHub.",
+  "what are rishi's industry experiences?": "💼 Industry: Fin-Tech, retail forecasting, Gen-AI HR chatbots, enterprise apps.",
+  "what are rishi's career interests?": "🎯 Interests: Applied LLMs, autonomous AI agents, product strategy, mentoring."
 };
 
-// === DOM Elements ===
+/* ---------- DOM refs -------------------------------------------------- */
 const chipsContainer = document.getElementById("chips-container");
-const chatArea = document.getElementById("chat-area");
-const messageForm = document.getElementById("message-form");
-const messageInput = document.getElementById("message-input");
+const chatArea       = document.getElementById("chat-area");
+const messageForm    = document.getElementById("message-form");
+const messageInput   = document.getElementById("message-input");
+const historyList    = document.getElementById("history-list");
 
-// === Initialize Quick Reply Chips ===
-function initializeChips() {
-  Object.keys(DATA).forEach(question => {
-    const chip = document.createElement("button");
-    chip.className = "chip";
-    chip.textContent = question;
-    chip.onclick = () => handleQuestion(question);
-    chipsContainer.appendChild(chip);
+/* ---------- Quick chips ------------------------------------------------ */
+function initChips(){
+  Object.keys(DATA).forEach(q=>{
+    const b=document.createElement("button");
+    b.className="chip";
+    b.textContent=q;
+    b.onclick=()=>handleQuestion(q);
+    chipsContainer.appendChild(b);
   });
 }
 
-// === Message Management ===
-function addMessage(text, isUser = false) {
-  const messageDiv = document.createElement("div");
-  messageDiv.className = `message ${isUser ? 'user-message' : 'bot-message'}`;
-  
-  const bubble = document.createElement("div");
-  bubble.className = "message-bubble";
-  bubble.innerHTML = text;
-  
-  messageDiv.appendChild(bubble);
-  chatArea.appendChild(messageDiv);
-  chatArea.scrollTop = chatArea.scrollHeight;
-  
-  return bubble;
+/* ---------- Helper: add plain text line -------------------------------- */
+function addMsg(text,isUser=false){
+  const wrap=document.createElement("div");
+  wrap.className=`message ${isUser?"user-message":"bot-message"}`;
+  const bub=document.createElement("div");
+  bub.className="message-bubble";
+  bub.textContent=text;
+  wrap.appendChild(bub);
+  chatArea.appendChild(wrap);
+  chatArea.scrollTop=chatArea.scrollHeight;
+  return wrap;
 }
 
-function showThinking() {
-  const thinkingDiv = document.createElement("div");
-  thinkingDiv.className = "thinking-bubble";
-  thinkingDiv.innerHTML = `
-    <span class="thinking-text">Thinking</span>
-    <div class="thinking-dots">
-      <div class="thinking-dot"></div>
-      <div class="thinking-dot"></div>
-      <div class="thinking-dot"></div>
-    </div>
-  `;
-  chatArea.appendChild(thinkingDiv);
-  chatArea.scrollTop = chatArea.scrollHeight;
-  return thinkingDiv;
+/* ---------- Helper: sidebar history ----------------------------------- */
+function pushHistory(text){
+  const li=document.createElement("li");
+  li.textContent=text;
+  li.onclick=()=>handleQuestion(text);
+  historyList.appendChild(li);
 }
 
-function typeMessage(element, text, speed = 30) {
-  return new Promise(resolve => {
-    let i = 0;
-    element.innerHTML = '';
-    const timer = setInterval(() => {
-      if (i < text.length) {
-        element.innerHTML += text.charAt(i);
-        i++;
-        chatArea.scrollTop = chatArea.scrollHeight;
-      } else {
-        clearInterval(timer);
-        resolve();
-      }
-    }, speed);
-  });
+/* ---------- Helper: transient phase line ------------------------------ */
+function phaseLine(css,html){
+  const div=document.createElement("div");
+  div.className=css;
+  div.innerHTML=html;
+  chatArea.appendChild(div);
+  chatArea.scrollTop=chatArea.scrollHeight;
+  return div;
 }
 
-// === Question Handling ===
-async function handleQuestion(question) {
-  addMessage(question, true);
-  const thinkingElement = showThinking();
-  await new Promise(resolve => setTimeout(resolve, 1500));
-  chatArea.removeChild(thinkingElement);
-  const response = DATA[question.toLowerCase()] || "🤔 I don't have information about that specific question yet. Please try one of the suggested questions above, or feel free to rephrase your query!";
-  const botBubble = addMessage("", false);
-  await typeMessage(botBubble, response);
-}
-
-// === Action Button Handlers ===
-function handleSearchInternet() {
-  addMessage("🌐 Search with Internet", true);
-  setTimeout(() => {
-    addMessage("🚧 **Service Work in Progress**<br><br>Internet search functionality is currently under development. This feature will allow me to search for real-time information beyond my current knowledge base. Stay tuned for updates!", false);
-  }, 800);
-}
-
-function handleReasoning() {
-  addMessage("🧠 Advanced Reasoning", true);
-  setTimeout(() => {
-    addMessage("🔬 **Advanced Reasoning Mode**<br><br>This feature is currently being developed to provide deep analytical thinking and complex problem-solving capabilities. It will enable me to break down complex queries and provide detailed, step-by-step reasoning. Coming soon!", false);
-  }, 800);
-}
-
-// === Form Handling ===
-messageForm.addEventListener("submit", async (e) => {
-  e.preventDefault();
-  const question = messageInput.value.trim();
-  if (question) {
-    messageInput.value = "";
-    await handleQuestion(question);
+/* ---------- Deep-Think toggle ----------------------------------------- */
+let deepThinkOn=false;
+function handleDeepThink(btn){
+  deepThinkOn=!deepThinkOn;
+  document.querySelectorAll(".tool-btn").forEach(b=>b.classList.remove("active"));
+  if(deepThinkOn){
+    btn.classList.add("active");
+    addMsg("🧠 Deep-Think enabled.",false);
+  }else{
+    addMsg("🧠 Deep-Think disabled.",false);
   }
-});
+}
 
-messageInput.addEventListener("keydown", (e) => {
-  if (e.key === "Enter" && !e.shiftKey) {
+/* ---------- Toolbar stubs (Search/Reasoning/Upload) ------------------- */
+function handleSearchInternet(){addMsg("🌐 Internet search coming soon.",false);}
+function handleReasoning(){addMsg("🧠 Advanced reasoning coming soon.",false);}
+function handleUploadFile(){
+  const fi=document.createElement("input");
+  fi.type="file";
+  fi.onchange=()=>fi.files.length&&addMsg(`📎 Uploaded: ${fi.files[0].name}`,false);
+  fi.click();
+}
+
+/* ---------- MAIN Q→A pipeline ---------------------------------------- */
+async function handleQuestion(q){
+  addMsg(q,true);            /* user (right)                                */
+  pushHistory(q);
+
+  /* 1️⃣  Thinking */
+  const th=phaseLine("thinking-bubble","Thinking…");
+  await new Promise(r=>setTimeout(r,700));
+  th.remove();
+
+  /* 2️⃣  Reasoning (only if Deep-Think ON) */
+  if(deepThinkOn){
+    const rs=phaseLine("reasoning-bubble",
+      "🔎 Retrieving embeddings …<br>📚 Vector search …<br>🧠 Synthesizing answer …");
+    await new Promise(r=>setTimeout(r,1500));
+    rs.remove();
+  }
+
+  /* 3️⃣  Answer */
+  const ans = DATA[q.toLowerCase()] ||
+              "🤔 Sorry, I don’t have that information yet.";
+  addMsg(ans,false);         /* bot (left)                                  */
+}
+
+/* ---------- Events ---------------------------------------------------- */
+messageForm.addEventListener("submit",e=>{
+  e.preventDefault();
+  const q=messageInput.value.trim();
+  if(q){messageInput.value='';handleQuestion(q);}
+});
+messageInput.addEventListener("keydown",e=>{
+  if(e.key==="Enter"&&!e.shiftKey){
     e.preventDefault();
     messageForm.dispatchEvent(new Event("submit"));
   }
 });
 
-// === Initialize Application ===
-document.addEventListener("DOMContentLoaded", () => {
-  initializeChips();
-  setTimeout(() => {
-    addMessage("🎉 Welcome! I'm ready to answer your questions about Rishi. Click on any quick question above or type your own question below!", false);
-  }, 1000);
-  messageInput.focus();
+/* ---------- Boot ------------------------------------------------------ */
+window.addEventListener("DOMContentLoaded",()=>{
+  initChips();
+  addMsg("🎉 Welcome! Ask me anything or pick a quick question!",false);
 });
+
+
