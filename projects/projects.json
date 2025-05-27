@@ -1,0 +1,352 @@
+[
+   {
+    "name": "XChat Lanxess AI Chatbot",
+    "desc": "• Secure enterprise bot that answers MSDS / SOP questions for chemists using retrieval-augmented generation (RAG) and LangChain.",
+    "image": "xchat",
+    "category": "mern",
+    "links": {
+      "view": "https://instagramernstack.herokuapp.com/",
+      "code": "https://github.com/ashkanmulla/instagram-mern"
+    }
+  },  
+  {
+    "name": "RAG Based Web Search AI Chatbot",
+    "desc": "AI Chatbot built using ReactJS and OpenAI API. Provides chat interface with AI.",
+    "image": "instagrammern",
+    "category": "mern",
+    "links": {
+      "view": "https://instagramernstack.herokuapp.com/",
+      "code": "https://github.com/ashkanmulla/instagram-mern"
+    }
+  }, 
+  {
+    "name": "Scanned-Document-Classification",
+    "desc": "Fully fledged android CRUD app based on different design patterns. Built using Java, XML, SQLite, Firebase, RoomDB, MVVM.",
+    "image": "notystackandroid",
+    "category": "android",
+    "links": {
+      "view": "https://www.linkedin.com/posts/ashkanmulla_androiddev-androidstudio-java-activity-6955224473822199808-JT0j",
+      "code": "https://github.com/ashkanmulla/notystack-android"
+    }
+  },
+  {
+    "name": "Multiple document QA Chatbot",
+    "desc": "All in one SPPU Engineering resources. Built using Java, XML and Firebase.",
+    "image": "sppuprepandroid",
+    "category": "android",
+    "links": {
+      "view": "https://www.linkedin.com/posts/ashkanmulla_androiddev-androidstudio-java-activity-6955224473822199808-JT0j",
+      "code": "https://github.com/ashkanmulla/sppu-prep-android"
+    }
+  },
+  {
+    "name": "AI Chatbot For Financial Reports",
+    "desc": "Native android app built using Java, XML. Retrofit & Glide dependencies. Provides different category news.",
+    "image": "newsboxandroid",
+    "category": "android",
+    "links": {
+      "view": "https://www.linkedin.com/posts/ashkanmulla_androiddev-androidstudio-java-activity-6955224473822199808-JT0j",
+      "code": "https://github.com/ashkanmulla/newsbox-android"
+    }
+  },
+  {
+    "name": "GraphRAG Pro Chatbot with History",
+    "desc": "Native android app built using Java, XML and Volley dependencies. Provides weather forecast.",
+    "image": "weatherlyandroid",
+    "category": "android",
+    "links": {
+      "view": "https://www.linkedin.com/posts/ashkanmulla_androiddev-androidstudio-java-activity-6955224473822199808-JT0j",
+      "code": "https://github.com/ashkanmulla/weatherly-android"
+    }
+  },
+  {
+    "name": "Privacy Focused Insurance RAG Chatbot",
+    "desc": "Full-Stack Flipkart with Admin Dashboard and Paytm Payment Gateway. MERN Stack WebApp, ready to use for business.",
+    "image": "flipkartmern",
+    "category": "mern",
+    "links": {
+      "view": "https://flipkartwebs.herokuapp.com/",
+      "code": "https://github.com/ashkanmulla/flipkart-mern"
+    }
+  },
+  {
+    "name": "Hybrid Recommender System ",
+    "desc": "ReactJS Basic Resume Generator which will generate customized resume in few minutes on your requirements.",
+    "image": "reco",
+    "category": "mern",
+    "links": {
+      "view": "https://resumegenx.netlify.app/",
+      "code": "https://github.com/ashkanmulla/resumegen"
+    }
+  },
+  {
+    "name": "Lead Scoring Predictive Model",
+    "desc": "Full-Stack project dashboard which is collection of projects built on the React library.",
+    "image": "reactprojects",
+    "category": "mern",
+    "links": {
+      "view": "https://reactjsprojects.herokuapp.com/",
+      "code": "https://github.com/ashkanmulla/React-Projects"
+    }
+  },
+  {
+    "name": "Azure OpenAI + OCR: Extraction Information from Images and PDF's",
+    "desc": "Full-Stack Flipkart Clone Using LAMP Stack. With all major features and OTP authentication and Cashfree payment gateway.",
+    "image": "flipkartphp",
+    "category": "lamp",
+    "links": {
+      "view": "https://github.com/ashkanmulla/Flipkart-Clone-PHP",
+      "code": "https://github.com/ashkanmulla/Flipkart-Clone-PHP"
+    }
+  },
+  {
+    "name": "Gen AI for vision Aadhar and PAN Card KYC Using Computer Vision",
+    "desc": "This website is specially build to showcase all major javaScript projects. All my javaScript based projects are in it.",
+    "image": "jspro",
+    "category": "basicweb",
+    "links": {
+      "view": "https://ashkanmulla.github.io/JavaScript-Projects",
+      "code": "https://github.com/ashkanmulla/JavaScript-Projects"
+    }
+  },
+  {
+    "name": "RAG Based Financial Chatbot",
+    "desc": "Flipkart, YouTube, Instagram, Sololearn web UI clones using tailwindCSS.",
+    "image": "webuiclones",
+    "category": "mern",
+    "links": {
+      "view": "https://github.com/ashkanmulla/web-ui-clones",
+      "code": "https://github.com/ashkanmulla/web-ui-clones"
+    }
+  },
+  {
+    "name": "OCR-Invoice Data Extraction",
+    "desc": "Crypto Tracker built using ReactJS and Chakra UI. Supports dark mode. API used coingecko.",
+    "image": "cryptotracker",
+    "category": "mern",
+    "links": {
+      "view": "https://crypto-tracker-react-project.netlify.app/",
+      "code": "https://github.com/ashkanmulla/React-Projects/tree/main/crypto-tracker"
+    }
+  },
+  {
+    "name": "Credit Card Fraud Detection",
+    "desc": "Hulu website built using NextJS and tailwindCSS. API used TMDB, deployed on vercel.",
+    "image": "credit",
+    "category": "mern",
+    "links": {
+      "view": "https://hulu-clone-ashkanmulla.vercel.app/",
+      "code": "https://github.com/ashkanmulla/React-Projects/tree/main/hulu-clone"
+    }
+  },
+  {
+    "name": "Multi-Lingual Voice RAG Chatbot",
+    "desc": "Personal Portfolio Website. Don't Need Much Info About It, Just Scroll Down. You're Here Only!",
+    "image": "portfolio1",
+    "category": "basicweb",
+    "links": {
+      "view": "#",
+      "code": "https://github.com/ashkanmulla/Portfolio-Website"
+    }
+  },
+  {
+    "name": "Realtime RAG Chatbot For Finance",
+    "desc": "Simple landing page website built using HTML, CSS, JavaScript and some JavaScript Libraries.",
+    "image": "composey",
+    "category": "basicweb",
+    "links": {
+      "view": "https://composey.netlify.app/",
+      "code": "https://github.com/ashkanmulla/LGMVIP-WebDev"
+    }
+  },
+  {
+    "name": "Database ChatBot-ICICI Lombard",
+    "desc": "It's an android app which uses web view component for displaying content. This app provides many different features.",
+    "image": "webviewapp",
+    "category": "android",
+    "links": {
+      "view": "https://github.com/ashkanmulla/Android-Webview#webapp--android-webview-app",
+      "code": "https://github.com/ashkanmulla/Android-Webview"
+    }
+  },
+  {
+    "name": "Bank Statement Analysze-5 Paisa",
+    "desc": "Basic Banking System based on PHP and MySQL database. Made with HTML, CSS, JavaScript and backend with PHP.",
+    "image": "tsfbank",
+    "category": "lamp",
+    "links": {
+      "view": "https://tsfbank.rf.gd",
+      "code": "https://github.com/ashkanmulla/TSF-Bank"
+    }
+  },
+  {
+    "name": "NLP to SQL-Fine tuning a T5 Model",
+    "desc": "Portfolio built using HTML, CSS, Bootstrap, SASS and JavaScript. Customized Bootstrap using SCSS.",
+    "image": "bootstrapportfolio",
+    "category": "basicweb",
+    "links": {
+      "view": "#",
+      "code": "#"
+    }
+  },
+  {
+    "name": "Customer Segmentation RFM Analysis",
+    "desc": "Basic website template built using HTML and Bootstrap.",
+    "image": "bootstraptemplate",
+    "category": "basicweb",
+    "links": {
+      "view": "#",
+      "code": "#"
+    }
+  },
+  {
+    "name": "Gold Price Prediction-Time Series",
+    "desc": "Basic food website landing page built using HTML, CSS and JavaScript.",
+    "image": "foodicious",
+    "category": "basicweb",
+    "links": {
+      "view": "#",
+      "code": "#"
+    }
+  },
+  {
+    "name": "Anomaly Detection Using ML",
+    "desc": "Basic food website landing page built using HTML, CSS, SASS, Bootstrap and jQuery.",
+    "image": "foodwebsite",
+    "category": "basicweb",
+    "links": {
+      "view": "#",
+      "code": "#"
+    }
+  },
+  {
+    "name": "Bank Customer Churn Prdiction",
+    "desc": "It's a web based chat app made using popular javaScript library Socket IO. Allows multiple users to connect.",
+    "image": "churn",
+    "category": "mern",
+    "links": {
+      "view": "https://github.com/ashkanmulla/WebChat#webchat",
+      "code": "https://github.com/ashkanmulla/WebChat"
+    }
+  },
+  {
+    "name": "Face Recognition System",
+    "desc": "It's an android app which uses SQLite to store user accounts data. It provides feature to simply transact amount.",
+    "image": "face",
+    "category": "android",
+    "links": {
+      "view": "https://github.com/ashkanmulla/Basic_Banking_App#basic-banking-app",
+      "code": "https://github.com/ashkanmulla/Basic_Banking_App"
+    }
+  },
+  {
+    "name": "Credit Risk Modeling",
+    "desc": "It provides the feature to Assign Issue With The Auto Generated Id By Using ChanceJS. Uses Local Storage.",
+    "image": "creditt",
+    "category": "basicweb",
+    "links": {
+      "view": "https://ashkanmulla.github.io/JavaScript-Projects/projects/issuetracker",
+      "code": "https://github.com/ashkanmulla/JavaScript-Projects/tree/main/projects/issuetracker"
+    }
+  },
+  {
+    "name": "ekyc using computer vision",
+    "desc": "A simple portal in which students can submit their PBL projects and faculties can view by access admin panel.",
+    "image": "ekyc",
+    "category": "lamp",
+    "links": {
+      "view": "https://github.com/ashkanmulla/PHP-Projects/tree/main/pblform#pbl-portal",
+      "code": "https://github.com/ashkanmulla/PHP-Projects/tree/main/pblform"
+    }
+  },
+  {
+    "name": "Time Series Forecasting Model",
+    "desc": "Full-Stack Flipkart Clone Using LAMP Stack. With all major features and OTP authentication and Cashfree payment gateway.",
+    "image": "time",
+    "category": "lamp",
+    "links": {
+      "view": "https://github.com/ashkanmulla/Flipkart-Clone-PHP",
+      "code": "https://github.com/ashkanmulla/Flipkart-Clone-PHP"
+    }
+  },
+  {
+    "name": "Youtube Video Summarization",
+    "desc": "It Fetch JSON Data And Allow Feature To Search Within The Content Displayed. Will be Developed By Using Live APIs.",
+    "image": "youtube",
+    "category": "basicweb",
+    "links": {
+      "view": "https://ashkanmulla.github.io/JavaScript-Projects/api-projects/saas-jobs",
+      "code": "https://github.com/ashkanmulla/JavaScript-Projects/tree/main/api-projects/saas-jobs"
+    }
+  },
+  {
+    "name": "LangGraph Expense Tracker",
+    "desc": "Bestwebs & ColorCoder. Two Years old websites memories. Simple with basic features.",
+    "image": "expense",
+    "category": "basicweb",
+    "links": {
+      "view": "#",
+      "code": "#"
+    }
+  },
+  {
+    "name": "Build AI Agent for Legal Document",
+    "desc": "Simply provides the color codes of resistors. Calculation information and about resistors.",
+    "image": "legal",
+    "category": "basicweb",
+    "links": {
+      "view": "#",
+      "code": "#"
+    }
+  },
+  {
+    "name": "KIA Info Website",
+    "desc": "Basic KIA webpage displays the info about seltos product range. Specs and Image Gallery.",
+    "image": "kiaweb",
+    "category": "basicweb",
+    "links": {
+      "view": "#",
+      "code": "#"
+    }
+  },
+  {
+    "name": "Burger Shop Dummy",
+    "desc": "Basic burger shop webpage allow users to check menu and price. Dummy Order Form.",
+    "image": "burgerweb",
+    "category": "basicweb",
+    "links": {
+      "view": "#",
+      "code": "#"
+    }
+  },
+  {
+    "name": "Indian Temples",
+    "desc": "It shows temples of different sectors of India. as user clicks it will redirect to wiki of that temple for info.",
+    "image": "templeweb",
+    "category": "basicweb",
+    "links": {
+      "view": "#",
+      "code": "#"
+    }
+  },
+  {
+    "name": "Indian Temples",
+    "desc": "It shows temples of different sectors of India. as user clicks it will redirect to wiki of that temple for info.",
+    "image": "templeweb",
+    "category": "basicweb",
+    "links": {
+      "view": "#",
+      "code": "#"
+    }
+  },
+  {
+    "name": "Indian Temples",
+    "desc": "It shows temples of different sectors of India. as user clicks it will redirect to wiki of that temple for info.",
+    "image": "templeweb",
+    "category": "basicweb",
+    "links": {
+      "view": "#",
+      "code": "#"
+    }
+  }
+]

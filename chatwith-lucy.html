@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+        referrerpolicy="no-referrer" />
+  <title>Chat with Lucy</title>
+</head>
+<body>
+
+  <!-- NAVBAR का छोटा वर्ज़न -->
+  <header>
+    <nav class="navbar">
+      <div class="logo">Askan Mulla</div>
+      <ul class="nav-list">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="chatwith-lucy.html" class="active">Chat with Lucy</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Lucy Chat Section -->
+  <section class="chat-lucy">
+    <div class="lucy-wrapper">
+      <h1 class="lucy-heading">Chat with <span>Lucy</span></h1>
+      <p class="lucy-tagline">Portfolio, skills या tech पर कुछ भी पूछिए—Lucy तुरन्त जवाब देगी।</p>
+      <!-- LOCAL Streamlit URL -->
+      <iframe src="http://localhost:8501" class="lucy-iframe"
+              loading="lazy" allow="clipboard-write; microphone">
+      </iframe>
+    </div>
+  </section>
+
+</body>
+</html>

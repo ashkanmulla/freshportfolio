@@ -1,0 +1,122 @@
+[
+    {
+        "name": "Python",
+        "icon": "https://img.icons8.com/color/48/000000/python--v1.png"
+    },
+    {   "name": "Generative AI",                 
+        "icon": "https://img.icons8.com/color/48/artificial-intelligence.png" 
+    },
+
+    {
+        "name": "AWS",
+        "icon": "https://img.icons8.com/color/48/amazon-web-services.png"
+    },
+    {
+        "name": "LangChain",
+        "icon": "https://img.icons8.com/emoji/48/link-emoji.png"
+    },
+    {
+        "name": "Azure OpenAI",
+        "icon": "https://img.icons8.com/fluency/48/azure-1.png"
+    },
+    {
+        "name": "TensorFlow",
+        "icon": "https://img.icons8.com/color/48/tensorflow.png"
+    },
+    {
+        "name": "FAST API",
+        "icon": "https://img.icons8.com/color/48/000000/chakra-ui.png"
+    },
+  {
+        "name": "Statistics",
+        "icon": "https://img.icons8.com/color/48/statistics.png"
+    },
+    {
+        "name": "MongoDB",
+        "icon": "https://img.icons8.com/color/48/000000/mongodb.png"
+    },
+    {
+        "name": "Git",
+        "icon": "https://img.icons8.com/color/48/000000/git.png"
+    },
+    {
+        "name": "Power BI",
+        "icon": "https://img.icons8.com/color/48/000000/power-bi.png"
+    },
+    {
+        "name": "PowerAutomate",
+        "icon": "https://img.icons8.com/fluency/48/microsoft-power-automate-2020.png"
+    },
+   {
+        "name": "MySQL",
+        "icon": "https://img.icons8.com/color/48/000000/mysql-logo.png"
+    },
+    {
+        "name": "SnowFlake",
+        "icon": "https://img.icons8.com/color/48/snowflake.png"
+    },
+    {
+        "name": "HuggingFace",
+        "icon": "https://img.icons8.com/fluency/48/hugging-face_app.png"
+    },
+    {
+        "name": "Tableau",
+        "icon": "https://img.icons8.com/color/48/tableau-software.png"
+    },
+    {
+        "name": "SAP",
+        "icon": "https://img.icons8.com/color/48/sap.png"
+    },
+    {
+        "name": "UiPath",
+        "icon": "https://img.icons8.com/color/48/uipath.png"
+    },
+    {
+        "name": "PostgreSQL",
+        "icon": "https://img.icons8.com/color/48/000000/postgreesql.png"
+    },
+    {
+        "name": "LangGraph",
+        "icon": "https://img.icons8.com/fluency/48/link.png"
+    },
+    {
+        "name": "GitLab",
+        "icon": "https://img.icons8.com/color/48/000000/gitlab.png"
+    },
+    {
+        "name": "CopilotStudio",
+        "icon": "https://img.icons8.com/fluency/48/microsoft-copilot.png"
+    },
+    {
+        "name": "Streamlit",
+        "icon": "https://img.icons8.com/color/48/streamlit.png"
+    },
+    {
+        "name": "Numpy",
+        "icon": "https://img.icons8.com/color/48/numpy.png"
+    },
+    {
+        "name": "Pandas",
+        "icon": "https://img.icons8.com/color/48/pandas.png"
+    },
+    {
+        "name": "GitHub",
+        "icon": "https://img.icons8.com/glyph-neue/48/ffffff/github.png"
+    },
+    {
+        "name": "OpenAI",
+        "icon": "https://img.icons8.com/color/48/chatgpt.png"
+    },
+        {
+        "name": "Visual Studio",
+        "icon": "https://img.icons8.com/color/48/visual-studio-code-2019.png"
+    },    
+    {
+        "name": "Kubernetes",
+        "icon": "https://img.icons8.com/color/48/kubernetes.png"
+    },
+        {
+        "name": "Jira",
+        "icon": "https://img.icons8.com/color/48/jira.png"
+    }
+]

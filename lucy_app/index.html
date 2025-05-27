@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+  <title>Lucy AI Assistant 🤖</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="chat-container">
+    <!-- Header -->
+    <div class="header">
+      <div class="bot-avatar">🤖</div>
+      <h1>Lucy AI Assistant</h1>
+      <p>Hi there! 👋 I'm Lucy, Rishi's intelligent personal assistant. I'm here to help you learn more about Rishi's skills, projects, and achievements. Feel free to ask me anything!</p>
+    </div>
+
+    <!-- Action Buttons -->
+    <div class="action-buttons">
+      <button class="action-btn search-btn" onclick="handleSearchInternet()">
+        🌐 Search with Internet
+      </button>
+      <button class="action-btn reasoning-btn" onclick="handleReasoning()">
+        🧠 Advanced Reasoning
+      </button>
+    </div>
+
+    <!-- Quick Reply Chips -->
+    <div class="chips-section">
+      <div class="chips-title">💡 Quick Questions</div>
+      <div id="chips-container" class="chips-container"></div>
+    </div>
+
+    <!-- Chat Area -->
+    <div id="chat-area" class="chat-area"></div>
+
+    <!-- Input Section -->
+    <div class="input-section">
+      <form id="message-form" class="input-container">
+        <input 
+          id="message-input" 
+          class="message-input" 
+          placeholder="Type your question here..." 
+          autocomplete="off"
+        />
+        <button type="submit" class="send-btn">Send 🚀</button>
+      </form>
+    </div>
+  </div>
+
+  <script src="lucy.js"></script>
+</body>
+</html>
