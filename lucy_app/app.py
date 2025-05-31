@@ -2,14 +2,14 @@ import streamlit as st
 from streamlit_option_menu import option_menu
 
 st.set_page_config(
-    page_title="Rishi's Portfolio",
+    page_title="Askan's Portfolio",
     page_icon="desktop_computer",
     layout="wide",
     initial_sidebar_state="auto",
 )
 with st.sidebar:
     choose = option_menu(
-        "Rishi Raj Sharma",
+        "Askan Mulla",
         [
             "Lucy",
             "About Me",
@@ -50,11 +50,11 @@ with st.sidebar:
     )
     st.markdown(
     "<div style='text-align: center;'>"
-    "<a href='https://linkedin.com/in/rishirajsharma231'><img src='https://upload.wikimedia.org/wikipedia/commons/c/ca/LinkedIn_logo_initials.png' width='40'></a>"
+    "<a href='https://linkedin.com/in/AskanMulla231'><img src='https://upload.wikimedia.org/wikipedia/commons/c/ca/LinkedIn_logo_initials.png' width='40'></a>"
     "&nbsp;&nbsp;&nbsp;&nbsp;"
-    "<a href='https://github.com/Rishiraj01'><img src='https://upload.wikimedia.org/wikipedia/commons/2/24/Github_logo_svg.svg' width='40'></a>"
+    "<a href='https://github.com/Askan01'><img src='https://upload.wikimedia.org/wikipedia/commons/2/24/Github_logo_svg.svg' width='40'></a>"
     "&nbsp;&nbsp;&nbsp;&nbsp;"
-    "<a href='mailto:rishirajsharma231@gmail.com'><img src='https://upload.wikimedia.org/wikipedia/commons/4/4e/Gmail_Icon.png' width='40'></a>"
+    "<a href='mailto:AskanMulla231@gmail.com'><img src='https://upload.wikimedia.org/wikipedia/commons/4/4e/Gmail_Icon.png' width='40'></a>"
     "</div>",
     unsafe_allow_html=True,
 )
