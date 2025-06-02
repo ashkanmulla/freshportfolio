@@ -63,10 +63,9 @@
         <ul class="social-icons">
           <li><a class="linkedin" aria-label="LinkedIn" href="https://www.linkedin.com/in/ashkanmulla/" target="_blank"><i class="fab fa-linkedin"></i></a></li> 
           <li><a class="github" aria-label="GitHub" href="https://github.com/ashkanmulla" target="_blank"><i class="fab fa-github"></i></a></li>
-          <li><a class="twitter" aria-label="Twitter" href="https://twitter.com/Askan_Mulla" target="_blank"><i class="fab fa-twitter"></i></a></li>
-          <li><a class="telegram" aria-label="Telegram" href="https://t.me/lifecode5" target="_blank"><i class="fab fa-telegram-plane"></i></a></li>
-          <li><a class="instagram" aria-label="Instagram" href="https://www.instagram.com/AskanMulla.dev"><i class="fab fa-instagram" target="_blank"></i></a></li>
-          <li><a class="dev" aria-label="Dev" href="https://dev.to/AskanMulla" target="_blank"><i class="fab fa-dev"></i></a></li>
+          <li><a class="kaggle" aria-label="Kaggle" href="https://www.kaggle.com/ashkanmulla" target="_blank"><i class="fab fa-kaggle"></i></a></li>
+          <li><a class="hackerrank" aria-label="Hackerrank" href="https://www.hackerrank.com/ashkanmulla01" target="_blank"><i class="fab fa-hackerrank"></i></a></li>
+          <li><a class="dev" aria-label="Dev" href="https://dev.to/ashkanmulla" target="_blank"><i class="fab fa-dev"></i></a></li>
         </ul>
       </div>
     </div>
@@ -363,48 +362,729 @@
 
 <!-- ========== CHAT WITH ME ========== -->
 <!-- ========== CHAT WITH ME ========== -->
-<section id="Chatbot" style="padding:40px 0;background:transparent">
+</section>
+<!-- contact section ends -->
+
+<!-- ========== CHAT WITH ME ========== -->
+<section id="Chatbot" style="padding:60px 0;background:transparent">
 
   <h2 class="heading"><i class="fas fa-comments"></i> Chat <span>With Me</span></h2>
 
-  <!-- ✅ Bot sirf iss box ke andar dikhega -->
-  <div id="landbot-container"
-       style="width:100%;max-width:1500px;height:900px;margin:0 auto;
-              border:1px solid #eee;border-radius:12px;overflow:hidden"></div>
+  <div class="chat-container" style="max-width:1200px;margin:0 auto;padding:0 30px;">
+    <div class="chat-box">
+      <!-- Chat Header -->
+      <div class="chat-header">
+        <div class="chat-header-content">
+          <div class="chat-avatar">
+            <img src="./assets/images/hero.png" alt="AI Assistant">
+          </div>
+          <div class="chat-info">
+            <h3>AI Assistant</h3>
+            <span class="status"><i class="fas fa-circle"></i> Online</span>
+          </div>
+        </div>
+        <button class="minimize-btn"><i class="fas fa-minus"></i></button>
+      </div>
 
-  <!-- Landbot script – page-par ek hi baar -->
-  <script SameSite="None; Secure"
-          src="https://static.landbot.io/landbot-3/landbot-3.0.0.js"></script>
+      <!-- Chat Messages Area -->
+      <div class="chat-messages" id="chatMessages">
+        <!-- Predefined Questions Section -->
+        <div class="predefined-questions">
+          <h4>Quick Questions</h4>
+          <div class="questions-grid">
+            <button class="question-chip" onclick="selectQuestion('What services do you offer?')">
+              <i class="fas fa-briefcase"></i> What services do you offer?
+            </button>
+            <button class="question-chip" onclick="selectQuestion('How can I contact you?')">
+              <i class="fas fa-phone"></i> How can I contact you?
+            </button>
+            <button class="question-chip" onclick="selectQuestion('Tell me about your experience')">
+              <i class="fas fa-star"></i> Tell me about your experience
+            </button>
+            <button class="question-chip" onclick="selectQuestion('What are your rates?')">
+              <i class="fas fa-dollar-sign"></i> What are your rates?
+            </button>
+            <button class="question-chip" onclick="selectQuestion('Do you work remotely?')">
+              <i class="fas fa-globe"></i> Do you work remotely?
+            </button>
+            <button class="question-chip" onclick="selectQuestion('What technologies do you use?')">
+              <i class="fas fa-code"></i> What technologies do you use?
+            </button>
+          </div>
+        </div>
+
+        <div class="message bot-message">
+          <div class="message-avatar">
+            <img src="./assets/images/hero.png" alt="Bot">
+          </div>
+          <div class="message-content">
+            <p>Hello! 👋 I'm here to help you. Feel free to ask me anything!</p>
+            <span class="message-time">Just now</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Typing Indicator -->
+      <div class="typing-indicator" id="typingIndicator" style="display:none;">
+        <div class="typing-dot"></div>
+        <div class="typing-dot"></div>
+        <div class="typing-dot"></div>
+      </div>
+
+      <!-- Chat Input Area -->
+      <div class="chat-input-area">
+        <div class="input-features">
+          <button class="feature-icon-btn" id="searchBtn" onclick="toggleFeature('search')" title="Enable Internet Search">
+            <i class="fas fa-globe-americas"></i>
+          </button>
+          <button class="feature-icon-btn" id="thinkBtn" onclick="toggleFeature('think')" title="Enable Deep Thinking">
+            <i class="fas fa-brain"></i>
+          </button>
+          <button class="attachment-btn" id="attachmentBtn">
+            <i class="fas fa-paperclip"></i>
+            <input type="file" id="fileInput" style="display:none;" multiple accept="image/*,.pdf,.doc,.docx">
+          </button>
+        </div>
+        <input type="text" class="chat-input" id="chatInput" placeholder="Type your message...">
+        <button class="send-btn" id="sendBtn">
+          <i class="fas fa-paper-plane"></i>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <style>
+    /* Chat Container Styles */
+    .chat-box {
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      border-radius: 20px;
+      overflow: hidden;
+      box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+      height: 650px;
+      display: flex;
+      flex-direction: column;
+      position: relative;
+    }
+
+    /* Chat Header */
+    .chat-header {
+      background: rgba(255,255,255,0.1);
+      backdrop-filter: blur(10px);
+      padding: 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 1px solid rgba(255,255,255,0.1);
+    }
+
+    .chat-header-content {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+    }
+
+    .chat-avatar {
+      width: 45px;
+      height: 45px;
+      border-radius: 50%;
+      overflow: hidden;
+      border: 3px solid rgba(255,255,255,0.3);
+    }
+
+    .chat-avatar img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .chat-info h3 {
+      color: #fff;
+      margin: 0;
+      font-size: 18px;
+    }
+
+    .status {
+      color: #a0f0a0;
+      font-size: 14px;
+      display: flex;
+      align-items: center;
+      gap: 5px;
+    }
+
+    .status i {
+      font-size: 8px;
+    }
+
+    .minimize-btn {
+      background: none;
+      border: none;
+      color: #fff;
+      font-size: 18px;
+      cursor: pointer;
+      padding: 5px 10px;
+      border-radius: 5px;
+      transition: background 0.3s;
+    }
+
+    .minimize-btn:hover {
+      background: rgba(255,255,255,0.1);
+    }
+
+    /* Predefined Questions */
+    .predefined-questions {
+      background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+      padding: 20px;
+      border-radius: 15px;
+      margin-bottom: 20px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    }
+
+    .predefined-questions h4 {
+      margin: 0 0 15px 0;
+      color: #333;
+      font-size: 18px;
+      font-weight: 600;
+    }
+
+    .questions-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 10px;
+    }
+
+    .question-chip {
+      background: #fff;
+      border: 2px solid transparent;
+      padding: 8px 10px;
+      border-radius: 25px;
+      font-size: 12px;
+      cursor: pointer;
+      transition: all 0.3s;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      color: #555;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+
+    .question-chip i {
+      color: #667eea;
+      font-size: 14px;
+    }
+
+    .question-chip:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+      border-color: #667eea;
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      color: #fff;
+    }
+
+    .question-chip:hover i {
+      color: #fff;
+    }
+
+    /* Chat Messages Area */
+    .chat-messages {
+      flex: 1;
+      overflow-y: auto;
+      padding: 20px;
+      background: rgba(255,255,255,0.95);
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+
+    .chat-messages::-webkit-scrollbar {
+      width: 6px;
+    }
+
+    .chat-messages::-webkit-scrollbar-track {
+      background: rgba(0,0,0,0.1);
+    }
+
+    .chat-messages::-webkit-scrollbar-thumb {
+      background: rgba(102,126,234,0.5);
+      border-radius: 3px;
+    }
+
+    /* Message Styles */
+    .message {
+      display: flex;
+      gap: 10px;
+      animation: fadeInUp 0.3s ease;
+    }
+
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(10px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .message-avatar {
+      width: 35px;
+      height: 35px;
+      border-radius: 50%;
+      overflow: hidden;
+      flex-shrink: 0;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+
+    .message-avatar img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .user-message {
+      flex-direction: row-reverse;
+    }
+
+    .message-content {
+      max-width: 70%;
+      background: #f1f3f5;
+      padding: 12px 16px;
+      border-radius: 18px;
+      position: relative;
+    }
+
+    .user-message .message-content {
+      background: linear-gradient(135deg, #667eea, #764ba2);
+      color: #fff;
+    }
+
+    .message-content p {
+      margin: 0;
+      line-height: 1.5;
+      font-size: 14px;
+    }
+
+    .message-time {
+      font-size: 13px;
+      color: #999;
+      margin-top: 5px;
+      display: block;
+    }
+
+    .user-message .message-time {
+      color: rgba(255,255,255,0.7);
+    }
+
+    /* Typing Indicator */
+    .typing-indicator {
+      display: flex;
+      align-items: center;
+      padding: 0 20px 10px;
+      gap: 4px;
+    }
+
+    .typing-dot {
+      width: 8px;
+      height: 8px;
+      background: #667eea;
+      border-radius: 50%;
+      animation: typing 1.4s infinite;
+    }
+
+    .typing-dot:nth-child(2) {
+      animation-delay: 0.2s;
+    }
+
+    .typing-dot:nth-child(3) {
+      animation-delay: 0.2s;
+    }
+
+    @keyframes typing {
+      0%, 60%, 100% {
+        transform: translateY(0);
+        opacity: 0.7;
+      }
+      30% {
+        transform: translateY(-10px);
+        opacity: 1;
+      }
+    }
+
+    /* Chat Input Area */
+    .chat-input-area {
+      padding: 20px;
+      background: rgba(255,255,255,0.95);
+      display: flex;
+      gap: 10px;
+      align-items: center;
+    }
+
+    .input-features {
+      display: flex;
+      gap: 5px;
+    }
+
+    .feature-icon-btn {
+      background: none;
+      border: none;
+      color: #999;
+      font-size: 18px;
+      cursor: pointer;
+      padding: 8px;
+      border-radius: 50%;
+      transition: all 0.3s;
+      position: relative;
+    }
+
+    .feature-icon-btn:hover {
+      background: rgba(102,126,234,0.1);
+      color: #667eea;
+    }
+
+    .feature-icon-btn.active {
+      color: #fff;
+      background: linear-gradient(135deg, #667eea, #764ba2);
+      box-shadow: 0 2px 8px rgba(102,126,234,0.3);
+    }
+
+    .attachment-btn {
+      background: none;
+      border: none;
+      color: #999;
+      font-size: 18px;
+      cursor: pointer;
+      padding: 8px;
+      border-radius: 50%;
+      transition: all 0.3s;
+      position: relative;
+    }
+
+    .attachment-btn:hover {
+      background: rgba(102,126,234,0.1);
+      color: #667eea;
+      transform: rotate(45deg);
+    }
+
+    .chat-input {
+      flex: 1;
+      border: 2px solid #e0e0e0;
+      border-radius: 25px;
+      padding: 12px 20px;
+      font-size: 15px;
+      outline: none;
+      transition: all 0.3s;
+    }
+
+    .chat-input:focus {
+      border-color: #667eea;
+      box-shadow: 0 0 0 3px rgba(102,126,234,0.1);
+    }
+
+    .send-btn {
+      background: linear-gradient(135deg, #667eea, #764ba2);
+      border: none;
+      color: #fff;
+      width: 45px;
+      height: 45px;
+      border-radius: 50%;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 18px;
+      transition: all 0.3s;
+      box-shadow: 0 4px 15px rgba(102,126,234,0.3);
+    }
+
+    .send-btn:hover {
+      transform: scale(1.1);
+      box-shadow: 0 6px 20px rgba(102,126,234,0.4);
+    }
+
+    .send-btn:active {
+      transform: scale(0.95);
+    }
+
+    /* File Preview */
+    .file-preview {
+      background: #f8f9fa;
+      padding: 10px;
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-top: 10px;
+      font-size: 14px;
+    }
+
+    .file-preview i {
+      color: #667eea;
+      font-size: 20px;
+    }
+
+    /* Feature Active Indicator */
+    .feature-indicator {
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      background: rgba(102,126,234,0.1);
+      padding: 4px 10px;
+      border-radius: 12px;
+      font-size: 11px;
+      color: #667eea;
+      margin-left: 10px;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .chat-box {
+        height: 500px;
+      }
+      
+      .message-content {
+        max-width: 85%;
+      }
+      
+      .chat-input {
+        font-size: 14px;
+      }
+
+      .questions-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
 
   <script>
-    /* Config URL apne Landbot dashboard se copy kijiye */
-    const landbot = new Landbot.Container({
-      container : '#landbot-container',
-      configUrl : 'https://storage.googleapis.com/landbot.online/v3/H-2969684-KSCEKDISCTUTTHA4/index.json'
+    // Chat functionality
+    const chatInput = document.getElementById('chatInput');
+    const sendBtn = document.getElementById('sendBtn');
+    const chatMessages = document.getElementById('chatMessages');
+    const typingIndicator = document.getElementById('typingIndicator');
+    const attachmentBtn = document.getElementById('attachmentBtn');
+    const fileInput = document.getElementById('fileInput');
+
+    // Feature states
+    let webSearchEnabled = false;
+    let deepThinkEnabled = false;
+
+    // Streaming speed control (milliseconds per word)
+    const STREAMING_DELAY = 90; // Adjust this value to control speed (lower = faster)
+
+    // Predefined answers
+    const predefinedAnswers = {
+      "What services do you offer?": "I offer web development, mobile app development, UI/UX design, and consulting services. I specialize in creating modern, responsive applications using the latest technologies.",
+      "How can I contact you?": "You can reach me through the contact form above, or directly via email. I typically respond within 24 hours on business days.",
+      "Tell me about your experience": "I have over 5 years of experience in full-stack development, working with technologies like React, Node.js, Python, and cloud platforms. I've completed 50+ projects for clients worldwide.",
+      "What are your rates?": "My rates vary depending on the project scope and complexity. I offer both hourly rates and fixed-price projects. Let's discuss your specific needs to provide an accurate quote.",
+      "Do you work remotely?": "Yes, I work remotely with clients from around the world. I use modern collaboration tools to ensure smooth communication and project management.",
+      "What technologies do you use?": "I work with React, Vue.js, Node.js, Python, Django, PostgreSQL, MongoDB, AWS, Docker, and many other modern technologies depending on project requirements."
+    };
+
+    // Bot responses (you can replace with actual API calls)
+    const botResponses = [
+      "That's an interesting question! Let me think about it...",
+      "I'd be happy to help you with that!",
+      "Could you provide more details about what you're looking for?",
+      "Based on what you've told me, I suggest...",
+      "That's a great point! Here's what I think..."
+    ];
+
+    // User avatar (you can replace with actual user image)
+    const userAvatar = "./assets/images/user.png";
+    const botAvatar = "./assets/images/hero.png";
+
+    function getCurrentTime() {
+      const now = new Date();
+      return now.toLocaleTimeString('en-US', { hour: 'numeric', minute: '2-digit', hour12: true });
+    }
+
+    function toggleFeature(feature) {
+      if (feature === 'search') {
+        webSearchEnabled = !webSearchEnabled;
+        document.getElementById('searchBtn').classList.toggle('active');
+      } else if (feature === 'think') {
+        deepThinkEnabled = !deepThinkEnabled;
+        document.getElementById('thinkBtn').classList.toggle('active');
+      }
+    }
+
+    function selectQuestion(question) {
+      // Add user message
+      addMessage(question, true);
+      
+      // Show typing indicator
+      showTypingIndicator();
+      
+      // Add bot response with streaming
+      setTimeout(() => {
+        hideTypingIndicator();
+        const answer = predefinedAnswers[question] || "Let me help you with that...";
+        addStreamingMessage(answer, false);
+      }, 1000);
+    }
+
+    function addMessage(content, isUser = false, isFile = false) {
+      const messageDiv = document.createElement('div');
+      messageDiv.className = `message ${isUser ? 'user-message' : 'bot-message'}`;
+      
+      let featureIndicators = '';
+      if (!isUser && (webSearchEnabled || deepThinkEnabled)) {
+        const features = [];
+        if (webSearchEnabled) features.push('<i class="fas fa-globe-americas"></i> Web');
+        if (deepThinkEnabled) features.push('<i class="fas fa-brain"></i> Deep');
+        featureIndicators = `<span class="feature-indicator">${features.join(' • ')}</span>`;
+      }
+      
+      let messageHTML = `
+        <div class="message-avatar">
+          <img src="${isUser ? userAvatar : botAvatar}" alt="${isUser ? 'User' : 'Bot'}">
+        </div>
+        <div class="message-content">
+      `;
+      
+      if (isFile) {
+        messageHTML += `
+          <div class="file-preview">
+            <i class="fas fa-file"></i>
+            <span>${content}</span>
+          </div>
+        `;
+      } else {
+        messageHTML += `<p>${content}${featureIndicators}</p>`;
+      }
+      
+      messageHTML += `
+          <span class="message-time">${getCurrentTime()}</span>
+        </div>
+      `;
+      
+      messageDiv.innerHTML = messageHTML;
+      chatMessages.appendChild(messageDiv);
+      chatMessages.scrollTop = chatMessages.scrollHeight;
+    }
+
+    function addStreamingMessage(content, isUser = false) {
+      const messageDiv = document.createElement('div');
+      messageDiv.className = `message ${isUser ? 'user-message' : 'bot-message'}`;
+      
+      let featureIndicators = '';
+      if (!isUser && (webSearchEnabled || deepThinkEnabled)) {
+        const features = [];
+        if (webSearchEnabled) features.push('<i class="fas fa-globe-americas"></i> Web');
+        if (deepThinkEnabled) features.push('<i class="fas fa-brain"></i> Deep');
+        featureIndicators = `<span class="feature-indicator">${features.join(' • ')}</span>`;
+      }
+      
+      const messageHTML = `
+        <div class="message-avatar">
+          <img src="${isUser ? userAvatar : botAvatar}" alt="${isUser ? 'User' : 'Bot'}">
+        </div>
+        <div class="message-content">
+          <p id="streaming-text"></p>
+          <span class="message-time">${getCurrentTime()}</span>
+        </div>
+      `;
+      
+      messageDiv.innerHTML = messageHTML;
+      chatMessages.appendChild(messageDiv);
+      
+      // Streaming effect
+      const textElement = messageDiv.querySelector('#streaming-text');
+      const words = content.split(' ');
+      let currentWordIndex = 0;
+      
+      const streamingInterval = setInterval(() => {
+        if (currentWordIndex < words.length) {
+          if (currentWordIndex === 0) {
+            textElement.innerHTML = words[0];
+          } else {
+            textElement.innerHTML += ' ' + words[currentWordIndex];
+          }
+          currentWordIndex++;
+          chatMessages.scrollTop = chatMessages.scrollHeight;
+        } else {
+          clearInterval(streamingInterval);
+          // Add feature indicators after streaming is complete
+          if (featureIndicators) {
+            textElement.innerHTML += featureIndicators;
+          }
+        }
+      }, STREAMING_DELAY);
+    }
+
+    function showTypingIndicator() {
+      typingIndicator.style.display = 'flex';
+      chatMessages.scrollTop = chatMessages.scrollHeight;
+    }
+
+    function hideTypingIndicator() {
+      typingIndicator.style.display = 'none';
+    }
+
+    function simulateBotResponse() {
+      showTypingIndicator();
+      
+      setTimeout(() => {
+        hideTypingIndicator();
+        const randomResponse = botResponses[Math.floor(Math.random() * botResponses.length)];
+        addStreamingMessage(randomResponse, false);
+      }, 1500 + Math.random() * 1500);
+    }
+
+    function sendMessage() {
+      const message = chatInput.value.trim();
+      
+      if (message) {
+        addMessage(message, true);
+        chatInput.value = '';
+        
+        // Check for predefined answers first
+        const matchingQuestion = Object.keys(predefinedAnswers).find(q => 
+          message.toLowerCase().includes(q.toLowerCase())
+        );
+        
+        if (matchingQuestion) {
+          showTypingIndicator();
+          setTimeout(() => {
+            hideTypingIndicator();
+            addStreamingMessage(predefinedAnswers[matchingQuestion], false);
+          }, 1000);
+        } else {
+          simulateBotResponse();
+        }
+      }
+    }
+
+    // Event listeners
+    sendBtn.addEventListener('click', sendMessage);
+    
+    chatInput.addEventListener('keypress', (e) => {
+      if (e.key === 'Enter') {
+        sendMessage();
+      }
+    });
+
+    attachmentBtn.addEventListener('click', () => {
+      fileInput.click();
+    });
+
+    fileInput.addEventListener('change', (e) => {
+      const files = e.target.files;
+      
+      for (let file of files) {
+        addMessage(`📎 ${file.name}`, true, true);
+      }
+      
+      fileInput.value = '';
+      simulateBotResponse();
     });
   </script>
 
-  <!-- 👉 Optional CSS override: font size छोटा, send-icon fix  -->
-  <style>
-    /* bubble aur input text 14 px */
-    #landbot-container .MessageBubble__content,
-    #landbot-container .Input__field   { font-size:8px !important; }
-
-    /* send icon hamesha visible */
-    #landbot-container .Input__button  { opacity:1 !important; }
-
-    /* bubbles thoda compact */
-    #landbot-container .MessageBubble  { line-height:1.4 !important; }
-  </style>
 </section>
 <!-- ========== END CHAT WITH ME ========== -->
 
 <!-- ========== END CHAT WITH ME ========== -->
-
-
-
-
-
 
 
 
@@ -506,3 +1186,6 @@ $('a[href="#chatbot"]').on('click', function(e){
 <div class="elfsight-app-e330b7c8-1b9a-4947-a9df-9e441d75af2b" data-elfsight-app-lazy></div>
 
 </html>
+
+
+
