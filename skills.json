@@ -27,10 +27,6 @@
         "name": "FAST API",
         "icon": "https://img.icons8.com/color/48/000000/chakra-ui.png"
     },
-  {
-        "name": "Statistics",
-        "icon": "https://img.icons8.com/color/48/statistics.png"
-    },
     {
         "name": "MongoDB",
         "icon": "https://img.icons8.com/color/48/000000/mongodb.png"
@@ -42,10 +38,6 @@
     {
         "name": "Power BI",
         "icon": "https://img.icons8.com/color/48/000000/power-bi.png"
-    },
-    {
-        "name": "PowerAutomate",
-        "icon": "https://img.icons8.com/fluency/48/microsoft-power-automate-2020.png"
     },
    {
         "name": "MySQL",
@@ -68,24 +60,12 @@
         "icon": "https://img.icons8.com/color/48/sap.png"
     },
     {
-        "name": "UiPath",
-        "icon": "https://img.icons8.com/color/48/uipath.png"
-    },
-    {
-        "name": "PostgreSQL",
-        "icon": "https://img.icons8.com/color/48/000000/postgreesql.png"
-    },
-    {
         "name": "LangGraph",
         "icon": "https://img.icons8.com/fluency/48/link.png"
     },
     {
         "name": "GitLab",
         "icon": "https://img.icons8.com/color/48/000000/gitlab.png"
-    },
-    {
-        "name": "CopilotStudio",
-        "icon": "https://img.icons8.com/fluency/48/microsoft-copilot.png"
     },
     {
         "name": "Streamlit",
@@ -107,10 +87,6 @@
         "name": "OpenAI",
         "icon": "https://img.icons8.com/color/48/chatgpt.png"
     },
-        {
-        "name": "Visual Studio",
-        "icon": "https://img.icons8.com/color/48/visual-studio-code-2019.png"
-    },    
     {
         "name": "Kubernetes",
         "icon": "https://img.icons8.com/color/48/kubernetes.png"
