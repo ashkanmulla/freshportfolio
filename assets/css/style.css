@@ -2506,3 +2506,50 @@ html {
     overflow-x: hidden;
   }
 }
+
+
+/* Ensure images resize properly */
+.hero img {
+  width: 100%;
+  height: auto;
+  object-fit: contain; /* or cover if you want full cover effect */
+}
+
+/* Ensure content does not overlap */
+.hero-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 20px;
+}
+
+.hero-section h1,
+.hero-section p {
+  margin: 10px 0;
+}
+
+/* Avoid overlapping icons on mobile */
+.social-icons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+/* Responsive adjustment */
+@media (max-width: 768px) {
+  .hero-section {
+    padding: 40px 20px;
+  }
+
+  .hero img {
+    max-width: 90%;
+  }
+
+  .about-me {
+    padding: 20px;
+    font-size: 16px;
+  }
+}
