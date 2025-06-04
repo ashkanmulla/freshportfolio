@@ -64,7 +64,7 @@ header {
   top: 0;
   left: 0;
   right: 0;
-  z-index: 9999; /* Changed from 1000 to 9999 */
+  z-index: 10000;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -325,47 +325,60 @@ header .navbar ul li a:hover {
 
 /* hero media queries starts*/
 /* hero media queries starts*/
+/* hero media queries starts*/
 @media (max-width: 768px) {
   .home {
-    padding-top: 8rem;
-    gap: 2rem;
+    min-height: 100vh;
+    padding-top: 7rem;
+    padding-bottom: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
   }
   
   .home .content {
-    flex: 1 1 100%;
     order: 2;
     text-align: center;
     padding: 0 2rem;
+    width: 100%;
   }
   
   .home .image {
-    flex: 1 1 100%;
     order: 1;
     text-align: center;
-    margin-bottom: 2rem;
+    width: 100%;
+    padding: 2rem 0;
   }
   
   .home .image img {
-    width: 60%;
-    max-width: 300px;
+    width: 250px;
+    height: 250px;
+    object-fit: cover;
     margin: 0 auto;
     display: block;
   }
   
+  .home .btn {
+    margin: 2rem auto;
+    position: relative;
+    display: inline-block;
+  }
+  
   .socials {
-    margin-top: 4rem;
+    margin-top: 3rem;
+    width: 100%;
   }
   
   .socials .social-icons {
     justify-content: center;
-    flex-wrap: wrap;
   }
 }
 
 @media (max-width: 450px) {
   .home {
-    min-height: 100vh;
-    padding: 7rem 1.5rem 2rem;
+    padding-top: 6rem;
+    min-height: auto;
   }
   
   .home .content h2 {
@@ -378,26 +391,23 @@ header .navbar ul li a:hover {
   
   .home .content p {
     font-size: 1.8rem;
+    margin-bottom: 1rem;
   }
   
   .home .content p span {
     font-size: 1.8rem;
   }
   
-  .home .btn {
-    margin: 3rem auto;
-    position: relative;
+  .home .image img {
+    width: 200px;
+    height: 200px;
   }
   
   .socials {
-    margin-top: 5rem;
-  }
-  
-  .home .image img {
-    width: 70%;
-    max-width: 250px;
+    margin-top: 2rem;
   }
 }
+/* hero media queries ends*/
 /* hero media queries ends*/
 /* hero media queries ends*/
 /* hero section end */
@@ -2064,10 +2074,7 @@ form .button-area {
   color: rgb(13, 0, 44);
   border-radius: 50%;
   transition: 1s linear;
-  z-index: 1000;
-}
-#scroll-top.active {
-  top: calc(100% - 12rem);
+  z-index: 10001;
 }
 /* scroll top ends */
 /* === Lucy Chat Section === */
@@ -2766,5 +2773,47 @@ body, html {
   
   .btn i {
     font-size: 1.2rem;
+  }
+}
+
+/* Mobile Overflow and Scrolling Fixes */
+@media (max-width: 768px) {
+  /* Fix scrolling */
+  html {
+    overflow-x: hidden;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+  
+  body {
+    overflow-x: hidden;
+    overflow-y: auto;
+    width: 100%;
+    position: relative;
+  }
+  
+  /* Fix sections */
+  section {
+    overflow: visible;
+    width: 100%;
+  }
+  
+  /* Ensure particles don't interfere */
+  .home #particles-js {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    pointer-events: none;
+  }
+  
+  /* Fix z-index for home content */
+  .home .content,
+  .home .image,
+  .socials {
+    position: relative;
+    z-index: 1;
   }
 }
