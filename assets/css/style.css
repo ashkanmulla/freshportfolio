@@ -655,37 +655,38 @@ header .navbar ul li a:hover {
 .info-container {
     display: flex;
     flex-wrap: wrap;
-    gap: 1.5rem;
-    margin: 2rem 0;
+    gap: 1rem; /* Reduced from 1.5rem */
+    margin: 1.5rem 0; /* Reduced from 2rem */
 }
 
 .info-box {
     display: flex;
     align-items: center;
-    gap: 1.5rem;
-    flex: 1 1 calc(50% - 1.5rem);
-    padding: 1.5rem;
-    border-radius: 12px;
+    gap: 1rem; /* Reduced from 1.5rem */
+    flex: 1 1 calc(50% - 1rem); /* Updated */
+    padding: 1rem; /* Reduced from 1.5rem */
+    border-radius: 10px; /* Reduced from 12px */
     background: #f8f9fa;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08); /* Slightly reduced shadow */
     transition: all 0.3s ease;
 }
 
 .info-box:hover {
     background: #f0f2f5;
-    transform: translateY(-3px);
+    transform: translateY(-2px); /* Reduced from -3px */
 }
 
 .info-icon {
-    width: 50px;
-    height: 50px;
+    width: 40px; /* Reduced from 50px */
+    height: 40px; /* Reduced from 50px */
     display: flex;
     align-items: center;
     justify-content: center;
     background: linear-gradient(135deg, #2506ad, #6b8cfe);
     color: #ffffff;
-    border-radius: 12px;
-    font-size: 1.5rem;
+    border-radius: 10px; /* Reduced from 12px */
+    font-size: 1.2rem; /* Reduced from 1.5rem */
+    flex-shrink: 0;
 }
 
 .info-content {
@@ -693,7 +694,7 @@ header .navbar ul li a:hover {
 }
 
 .info-label {
-    font-size: 1.2rem;
+    font-size: 1rem; /* Reduced from 1.2rem */
     color: #666;
     margin: 0;
     font-family: 'Poppins', sans-serif;
@@ -701,9 +702,9 @@ header .navbar ul li a:hover {
 }
 
 .info-value {
-    font-size: 1.5rem;
+    font-size: 1.3rem; /* Reduced from 1.5rem */
     color: #222;
-    margin: 0.3rem 0 0;
+    margin: 0.2rem 0 0; /* Reduced from 0.3rem */
     font-weight: 600;
     font-family: 'Poppins', sans-serif;
 }
