@@ -277,3 +277,9 @@ window.addEventListener('orientationchange', function() {
         window.location.reload();
     }, 500);
 });
+
+window.scrollTo({
+  top: target.offset().top,
+  behavior: 'smooth'
+});
+

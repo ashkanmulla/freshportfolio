@@ -2553,3 +2553,12 @@ html {
     font-size: 16px;
   }
 }
+
+body, html {
+  scroll-behavior: smooth;
+  will-change: scroll-position;
+}
+.smooth-element {
+  transform: translate3d(0, 0, 0);
+  will-change: transform;
+}
