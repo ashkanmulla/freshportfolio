@@ -64,7 +64,7 @@ header {
   top: 0;
   left: 0;
   right: 0;
-  z-index: 1000;
+  z-index: 9999; /* Changed from 1000 to 9999 */
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -324,23 +324,81 @@ header .navbar ul li a:hover {
 /* social icons end */
 
 /* hero media queries starts*/
-@media (max-width: 450px) {
-  .home .btn {
-    margin: 4rem 0;
+/* hero media queries starts*/
+@media (max-width: 768px) {
+  .home {
+    padding-top: 8rem;
+    gap: 2rem;
   }
-  .socials {
-    margin-top: 12rem;
+  
+  .home .content {
+    flex: 1 1 100%;
+    order: 2;
+    text-align: center;
+    padding: 0 2rem;
   }
+  
+  .home .image {
+    flex: 1 1 100%;
+    order: 1;
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+  
   .home .image img {
-    margin-top: -12rem;
+    width: 60%;
+    max-width: 300px;
+    margin: 0 auto;
+    display: block;
   }
-  .home .content p {
-    font-size: 2.2rem;
+  
+  .socials {
+    margin-top: 4rem;
   }
-  .home .content p span {
-    font-size: 2.2rem;
+  
+  .socials .social-icons {
+    justify-content: center;
+    flex-wrap: wrap;
   }
 }
+
+@media (max-width: 450px) {
+  .home {
+    min-height: 100vh;
+    padding: 7rem 1.5rem 2rem;
+  }
+  
+  .home .content h2 {
+    font-size: 3rem;
+  }
+  
+  .home .content h2 span {
+    font-size: 3rem;
+  }
+  
+  .home .content p {
+    font-size: 1.8rem;
+  }
+  
+  .home .content p span {
+    font-size: 1.8rem;
+  }
+  
+  .home .btn {
+    margin: 3rem auto;
+    position: relative;
+  }
+  
+  .socials {
+    margin-top: 5rem;
+  }
+  
+  .home .image img {
+    width: 70%;
+    max-width: 250px;
+  }
+}
+/* hero media queries ends*/
 /* hero media queries ends*/
 /* hero section end */
 
@@ -2214,33 +2272,67 @@ html {
 }
 
 /* Work Section Mobile Fixes */
+/* work section media queries */
 @media (max-width: 768px) {
-  .work {
-    padding: 3rem 5%;
-  }
-  
   .work .box-container {
-    margin: 1rem 0;
-    gap: 2rem;
+    margin: 1rem;
   }
   
   .work .box-container .box {
     flex: 1 1 100%;
-    height: 25rem;
+    margin-bottom: 2rem;
   }
   
-  .work .desc {
-    margin: 1rem;
+  .work .box-container .box .content {
+    top: 80%;
+  }
+  
+  .work .box-container .box:hover .content {
+    top: 20%;
   }
   
   .work .desc .btns {
-    flex-direction: column;
+    flex-wrap: wrap;
     gap: 1rem;
+    justify-content: flex-start;
   }
   
   .work .desc .btns .btn {
-    margin-right: 0;
+    flex: 0 1 auto;
+    margin-right: 1rem;
+    margin-bottom: 1rem;
+    padding: 1.2rem 2rem;
+    font-size: 1.4rem;
+  }
+}
+
+@media (max-width: 450px) {
+  .work .box-container .box .content {
+    padding: 1rem;
+  }
+  
+  .work .box-container .box .content .tag h3 {
+    font-size: 1.5rem;
+  }
+  
+  .work .desc p {
+    font-size: 1.3rem;
+  }
+  
+  .work .desc .btns {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    width: 100%;
+  }
+  
+  .work .desc .btns .btn {
+    flex: 1 1 calc(50% - 0.5rem);
+    margin: 0;
     text-align: center;
+    padding: 1rem 1.5rem;
+    font-size: 1.3rem;
   }
 }
 
@@ -2573,7 +2665,7 @@ body, html {
   .hero-image img {
     width: 100%;
     height: auto;
-    object-fit: contain;
+    object-fit: contain; 
   }
 
   .hero-content {
@@ -2596,5 +2688,83 @@ body, html {
     width: 100%;
     text-align: center; /* text center align ho jaye */
     padding-top: 20px;  /* thoda gap image aur text me */
+  }
+}
+
+/* Additional Mobile Fixes */
+@media (max-width: 768px) {
+  /* Prevent horizontal scroll */
+  html, body {
+    overflow-x: hidden;
+    width: 100%;
+  }
+  
+  /* Fix section padding */
+  section {
+    padding: 5rem 2rem 2rem;
+    overflow-x: hidden;
+  }
+  
+  /* Ensure images don't overflow */
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+  
+  /* Fix z-index issues */
+  .home #particles-js {
+    z-index: -1;
+  }
+  
+  .home .content,
+  .home .image {
+    z-index: 2;
+    position: relative;
+  }
+  
+  /* Ensure social icons don't overlap */
+  .socials {
+    position: relative;
+    z-index: 3;
+    width: 100%;
+    padding: 0 1rem;
+  }
+  
+  .social-icons {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .social-icons li {
+    margin: 0;
+  }
+}
+
+@media (max-width: 450px) {
+  /* Very small screens */
+  section {
+    padding: 5rem 1rem 2rem;
+  }
+  
+  .heading {
+    font-size: 2.5rem;
+  }
+  
+  /* Fix button sizes on small screens */
+  .btn {
+    padding: 1rem 2rem;
+    font-size: 1.3rem;
+  }
+  
+  .btn span {
+    font-size: 1.3rem;
+  }
+  
+  .btn i {
+    font-size: 1.2rem;
   }
 }
