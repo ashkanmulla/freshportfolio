@@ -239,3 +239,41 @@ srtop.reveal('.experience .timeline .container', { interval: 400 });
 /* SCROLL CONTACT */
 srtop.reveal('.contact .container', { delay: 400 });
 srtop.reveal('.contact .container .form-group', { delay: 400 });
+
+// Mobile-specific improvements
+$(document).ready(function() {
+    // Close mobile menu when clicking on a link
+    $('.navbar ul li a').on('click', function() {
+        if (window.innerWidth <= 768) {
+            $('#menu').removeClass('fa-times');
+            $('.navbar').removeClass('nav-toggle');
+        }
+    });
+    
+    // Prevent zoom on input focus for iOS
+    $('input, textarea, select').on('focus', function() {
+        $('meta[name=viewport]').attr('content', 'width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0');
+    }).on('blur', function() {
+        $('meta[name=viewport]').attr('content', 'width=device-width, initial-scale=1.0');
+    });
+    
+    // Smooth scroll adjustment for mobile
+    if (window.innerWidth <= 768) {
+        $('a[href*="#"]').on('click', function (e) {
+            e.preventDefault();
+            const target = $($(this).attr('href'));
+            if (target.length) {
+                $('html, body').animate({
+                    scrollTop: target.offset().top - 70
+                }, 500, 'linear');
+            }
+        });
+    }
+});
+
+// Handle orientation change
+window.addEventListener('orientationchange', function() {
+    setTimeout(function() {
+        window.location.reload();
+    }, 500);
+});
