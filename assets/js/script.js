@@ -276,3 +276,18 @@ window.scrollTo({
   behavior: 'smooth'
 });
 
+// smooth scrolling
+$('a[href*="#"]').on('click', function (e) {
+    e.preventDefault();
+    let target = $($(this).attr('href'));
+    if (target.length) {
+        let scrollTo = target.offset().top;
+        // Adjust for mobile
+        if (window.innerWidth <= 768) {
+            scrollTo -= 65;
+        }
+        $('html, body').animate({
+            scrollTop: scrollTo
+        }, 500, 'linear');
+    }
+});
