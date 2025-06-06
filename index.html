@@ -23,6 +23,10 @@
 <!-- <div class="loader-container">
   <img draggable="false" src="./assets/images/preloader.gif" alt="">
 </div> -->
+<!-- Theme Toggle Button (add in nav/header) -->
+<button class="theme-toggle-btn" id="theme-toggle-btn" title="Switch Dark/Light">
+  🌙 Dark
+</button>
 
 <!-- navbar starts -->
 <header>
@@ -38,7 +42,6 @@
             <li><a href="#work">Work</a></li>
             <li><a href="#experience">Experience</a></li>
             <li><a href="#contact">Contact</a></li>
-            <li><a href="chatwith-lucy.html">Chat with Lucy</a></li>
             </ul>
         </nav>
 </header>
@@ -59,10 +62,9 @@
         <ul class="social-icons">
           <li><a class="linkedin" aria-label="LinkedIn" href="https://www.linkedin.com/in/ashkanmulla/" target="_blank"><i class="fab fa-linkedin"></i></a></li> 
           <li><a class="github" aria-label="GitHub" href="https://github.com/ashkanmulla" target="_blank"><i class="fab fa-github"></i></a></li>
-          <li><a class="twitter" aria-label="Twitter" href="https://twitter.com/Askan_Mulla" target="_blank"><i class="fab fa-twitter"></i></a></li>
-          <li><a class="telegram" aria-label="Telegram" href="https://t.me/lifecode5" target="_blank"><i class="fab fa-telegram-plane"></i></a></li>
-          <li><a class="instagram" aria-label="Instagram" href="https://www.instagram.com/AskanMulla.dev"><i class="fab fa-instagram" target="_blank"></i></a></li>
-          <li><a class="dev" aria-label="Dev" href="https://dev.to/AskanMulla" target="_blank"><i class="fab fa-dev"></i></a></li>
+          <li><a class="hackerrank" aria-label="Hackerrank" href="https://www.hackerrank.com/ashkanmulla01" target="_blank"><i class="fab fa-hackerrank"></i></a></li>
+          <li><a class="kaggle" aria-label="Kaggle" href="https://www.kaggle.com/ashkanmulla" target="_blank"><i class="fab fa-kaggle"></i></a></li>
+          <li><a class="dev" aria-label="Dev" href="https://dev.to/ashkanmulla" target="_blank"><i class="fab fa-dev"></i></a></li>
         </ul>
       </div>
     </div>
@@ -100,7 +102,7 @@
                     
                     <p class="bio">
                         Senior AI Engineer with <span class="highlight">8+ years</span> in Machine Learning & Deep Learning.<br>
-                        I deliver scalable, production-ready AI solutions — Python, TensorFlow, NLP, GenAI, LLMs.<br>
+                        I deliver scalable, production-ready AI solutions — Python, GenAI, Deep Learning, NLP, LLMs.<br>
                         Proven results across Finance, Manufacturing, and Tech. Focused on real-world impact, collaboration, and client value.<br>
                         <b class="tagline">Let's transform your ideas into intelligent reality!</b>
                     </p>
@@ -357,6 +359,54 @@
 <!-- contact section ends -->
 
 
+<!-- ========== CHAT WITH ME ========== -->
+<!-- ========== CHAT WITH ME ========== -->
+<section id="chatbot" style="padding:40px 0;background:transparent">
+
+  <h2 class="heading"><i class="fas fa-comments"></i> Chat <span>with Me</span></h2>
+
+  <!-- ✅ Bot sirf iss box ke andar dikhega -->
+  <div id="landbot-container"
+       style="width:100%;max-width:1500px;height:900px;margin:0 auto;
+              border:1px solid #eee;border-radius:12px;overflow:hidden"></div>
+
+  <!-- Landbot script – page-par ek hi baar -->
+  <script SameSite="None; Secure"
+          src="https://static.landbot.io/landbot-3/landbot-3.0.0.js"></script>
+
+  <script>
+    /* Config URL apne Landbot dashboard se copy kijiye */
+    const landbot = new Landbot.Container({
+      container : '#landbot-container',
+      configUrl : 'https://storage.googleapis.com/landbot.online/v3/H-2969684-KSCEKDISCTUTTHA4/index.json'
+    });
+  </script>
+
+  <!-- 👉 Optional CSS override: font size छोटा, send-icon fix  -->
+  <style>
+    /* bubble aur input text 14 px */
+    #landbot-container .MessageBubble__content,
+    #landbot-container .Input__field   { font-size:8px !important; }
+
+    /* send icon hamesha visible */
+    #landbot-container .Input__button  { opacity:1 !important; }
+
+    /* bubbles thoda compact */
+    #landbot-container .MessageBubble  { line-height:1.4 !important; }
+  </style>
+</section>
+<!-- ========== END CHAT WITH ME ========== -->
+
+<!-- ========== END CHAT WITH ME ========== -->
+
+
+
+
+
+
+
+
+
 <!-- footer section starts -->
 <section class="footer">
 
@@ -430,5 +480,27 @@
 
 <script src="./assets/js/script.js"></script>
 
+
+
+
+
+
+
+<script>
+$('a[href="#chatbot"]').on('click', function(e){
+   e.preventDefault();
+   $('html, body').animate({
+       scrollTop: $('#chatbot').offset().top - 60   /* header height adjust */
+   }, 500);
+});
+</script>
+
+
+
+
 </body>
+<!-- Elfsight AI Chatbot | Untitled AI Chatbot -->
+<script src="https://static.elfsight.com/platform/platform.js" async></script>
+<div class="elfsight-app-e330b7c8-1b9a-4947-a9df-9e441d75af2b" data-elfsight-app-lazy></div>
+
 </html>

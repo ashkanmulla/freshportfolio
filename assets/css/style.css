@@ -2026,3 +2026,39 @@ form .button-area {
 .lucy-tagline{font-size:1.1rem;color:#555;margin:1rem 0 2rem;}
 .lucy-iframe{width:100%;max-width:950px;height:620px;border:2px solid rgba(43,61,218,.2);
              border-radius:12px;box-shadow:0 8px 32px rgba(0,0,0,.08);}
+
+:root {
+  --bg-color: #f5f7fa;
+  --text-color: #181a1b;
+  --primary-color: #2348de;
+  /* ...aur jo bhi global color variable ho, usko yahan define karen */
+}
+body {
+  background: var(--bg-color);
+  color: var(--text-color);
+  transition: background 0.3s, color 0.3s;
+}
+
+/* Dark Theme */
+body.dark-mode {
+  --bg-color: #121212;
+  --text-color: #f5f7fa;
+  --primary-color: #58a6ff;
+}
+/* Optional: Button look for dark mode toggle */
+.theme-toggle-btn {
+  cursor: pointer;
+  padding: 8px 14px;
+  background: var(--primary-color);
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  margin-left: 20px;
+  font-weight: 600;
+  font-size: 1rem;
+  transition: background 0.2s, color 0.2s;
+}
+.theme-toggle-btn:hover {
+  background: #181a1b;
+  color: #fff;
+}
