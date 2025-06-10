@@ -76,7 +76,7 @@
     </div>
 </section>
 <!-- hero section ends -->
-
+<a href="#work" class="fas fa-angle-up" id="scroll-top"></a>
 
 <!-- about section starts -->
 <section class="about" id="about">
@@ -94,6 +94,7 @@
                     <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
                     <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
                 </div>
+                
             </div>
             
             <div class="content">
@@ -104,12 +105,14 @@
                     </div>
                     
                     <p class="bio">
-                        Senior AI Engineer with <span class="highlight">8+ years</span> in Machine Learning & Deep Learning.<br>
-                        I deliver scalable, production-ready AI solutions — Python, TensorFlow, NLP, GenAI, LLMs.<br>
-                        Proven results across Finance, Manufacturing, and Tech. Focused on real-world impact, collaboration, and client value.<br>
+                        Results-driven Senior Data Scientist with <span class="highlight">8+ years</span> of experience architecting enterprise-scale Generative AI solutions and leading high-performance ML teams.<br>
+                        Proven expertise in deploying production RAG (Retrieval Augmented Generation) systems, fine-tuning Large Language Models (LLMs), and implementing end-to-end MLOps pipelines that delivered 40% operational efficiency gains.<br>
+                        <span class="highlight">AWS Certified Machine Learning Engineer</span> with demonstrated success in translating complex business requirements into scalable AI solutions using LangChain, Vector Databases, and cloud-native architectures.<br>
+                        Expert in stakeholder management and cross-functional collaboration, having led teams of 6+ data scientists while managing $3M+ project portfolios.<br>
+
                         <b class="tagline">Let's transform your ideas into intelligent reality!</b>
                     </p>
-                    
+
                     <div class="info-container">
                         <div class="info-box">
                             <div class="info-icon"><i class="fas fa-envelope"></i></div>
@@ -120,10 +123,10 @@
                         </div>
                         
                         <div class="info-box">
-                            <div class="info-icon"><i class="fas fa-map-marker-alt"></i></div>
+                            <div class="info-icon"><i class="fas fa-phone"></i></div>
                             <div class="info-content">
-                                <p class="info-label">Location</p>
-                                <p class="info-value">Mumbai, India - 400037</p>
+                                <p class="info-label">Contact</p>
+                                <p class="info-value">+91 9619537295</p>
                             </div>
                         </div>
                         
@@ -132,6 +135,13 @@
                             <div class="info-content">
                                 <p class="info-label">Experience</p>
                                 <p class="info-value">8+ Years</p>
+                            </div>
+                        </div>
+                        <div class="info-box">
+                            <div class="info-icon"><i class="fas fa-map-marker-alt"></i></div>
+                            <div class="info-content">
+                                <p class="info-label">Location</p>
+                                <p class="info-value">Mumbai, India - 400037</p>
                             </div>
                         </div>
                     </div>
@@ -229,7 +239,7 @@
 
   <div class="box-container">
 
-    <!-- <div class="box tilt">
+    <div class="box tilt">
       <img draggable="false" src="./assets/images/projects/portfolio1.PNG" alt="" />
       <div class="content">
         <div class="tag">
@@ -243,7 +253,7 @@
           </div>
         </div>
       </div>
-    </div> -->
+    </div>
 
 </div>
 
@@ -407,7 +417,7 @@
             <button class="question-chip" onclick="selectQuestion('How do you stay updated with the latest AI and data science trends?')">
              </i> How do you stay updated with the latest AI ML trends?
             </button>
-            <button class="question-chip" onclick="selectQuestion('How do you handle team conflicts or disagreements?')">
+            <button class="question-chip" onclick="selectQuestion('How do you handle conflicts in the workplace?')">
               </i> How do you handle conflicts in the workplace?
             </button>
             <button class="question-chip" onclick="selectQuestion('Have you ever missed deadline? How did you handle it?')">
@@ -882,12 +892,19 @@
 
     // Predefined answers
     const predefinedAnswers = {
-      "What services do you offer?": "I offer web development, mobile app development, UI/UX design, and consulting services. I specialize in creating modern, responsive applications using the latest technologies.",
-      "How can I contact you?": "You can reach me through the contact form above, or directly via email. I typically respond within 24 hours on business days.",
-      "Tell me about your experience": "I have over 5 years of experience in full-stack development, working with technologies like React, Node.js, Python, and cloud platforms. I've completed 50+ projects for clients worldwide.",
-      "What are your rates?": "My rates vary depending on the project scope and complexity. I offer both hourly rates and fixed-price projects. Let's discuss your specific needs to provide an accurate quote.",
-      "Do you work remotely?": "Yes, I work remotely with clients from around the world. I use modern collaboration tools to ensure smooth communication and project management.",
-      "What technologies do you use?": "I work with React, Vue.js, Node.js, Python, Django, PostgreSQL, MongoDB, AWS, Docker, and many other modern technologies depending on project requirements."
+      "Can you summarize your professional experience?": " I have 8+ years of experience in data science and AI, with strong skills in Building and deploying end to end Gen AI, NLP, DL, ML and statistical modeling. I’ve also led data science teams and driven strategic projects, demonstrating leadership",
+      "What are your career goals for the next 5 years?": "To lead innovative AI projects and mentor junior data scientists while continuously enhancing my technical expertise.",
+      "What technologies and tools do you specialize in?": " I specialize in Python (with libraries like Pandas and scikit-learn) and I have extensive experience with SQL/NoSQL databases (e.g. PostgreSQL, MongoDB).",
+      "How do you handle tight deadlines or pressure?": "I prioritize tasks, stay organized, and communicate proactively with my team to meet deadlines efficiently.",
+      "How do you stay updated with the latest AI and data science trends?": "I regularly attend webinars, read research papers, and participate in online AI communities.",
+      "How do you handle conflicts in the workplace?": "I approach conflicts calmly, listen actively, and work towards mutually beneficial solutions.",
+      "What is your approach to continuous learning?": "I regularly update my skills through courses, reading, and hands-on projects to stay current in AI.",
+      "How do you stay updated with the latest AI and data science trends?": "I regularly attend webinars, read research papers, and participate in online AI communities.",
+      "How do you stay updated with the latest AI and data science trends?": "I regularly attend webinars, read research papers, and participate in online AI communities.",
+      "How do you stay updated with the latest AI and data science trends?": "I regularly attend webinars, read research papers, and participate in online AI communities.",
+      "How do you stay updated with the latest AI and data science trends?": "I regularly attend webinars, read research papers, and participate in online AI communities.",
+                                
+      "Have you ever missed deadline? How did you handle it?": "Rarely, but when it happened, I communicated proactively, adjusted plans, and ensured the quality of deliverables."
     };
 
     // Bot responses (you can replace with actual API calls)

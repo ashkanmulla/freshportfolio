@@ -155,127 +155,6 @@ header .navbar ul li a:hover{
 }
 /* hamburger icon ends */
 
-/* Enhanced About Me Section */
-.about {
-    background: linear-gradient(to bottom right, #f6f9fc, #edf2f7);
-    padding: 5rem 10%;
-}
-
-.about .heading {
-    margin-bottom: 4rem;
-}
-
-.about .row {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 2rem;
-    align-items: center;
-}
-
-.about .row .image {
-    flex: 1 1 25rem;
-    text-align: center;
-}
-
-.about .row .image img {
-    width: 25rem;
-    border-radius: 5%;
-    border: 1rem solid white;
-    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
-    transition: all 0.3s ease;
-}
-
-.about .row .image img:hover {
-    transform: scale(1.03);
-    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
-}
-
-.about .row .content {
-    flex: 1 1 35rem;
-    padding: 2rem;
-    background: white;
-    border-radius: 1rem;
-    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
-    position: relative;
-    z-index: 1;
-    overflow: hidden;
-}
-
-.about .row .content::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    right: 0;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(45deg, transparent 49%, #72e2ae 50%);
-    z-index: -1;
-    transform: scale(2.5);
-    opacity: 0.1;
-}
-
-.about .row .content h3 {
-    font-size: 2.5rem;
-    color: #2c3e50;
-    margin-bottom: 0.5rem;
-}
-
-.about .row .content .tag {
-    display: inline-block;
-    font-size: 1.5rem;
-    color: white;
-    background: #72e2ae;
-    padding: 0.5rem 1.5rem;
-    margin-bottom: 1.5rem;
-    border-radius: 2rem;
-    font-weight: 600;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-}
-
-.about .row .content p {
-    font-size: 1.1rem;
-    color: #555;
-    line-height: 1.8;
-    margin-bottom: 1.5rem;
-}
-
-.about .row .content .box-container {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 1.5rem;
-    margin-bottom: 2rem;
-}
-
-.about .row .content .box-container .box {
-    flex: 1 1 20rem;
-    background: #f7f7f7;
-    padding: 1rem;
-    border-radius: 0.5rem;
-    border-left: 0.4rem solid #72e2ae;
-    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
-    transition: all 0.3s ease;
-}
-
-.about .row .content .box-container .box:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
-}
-
-.about .row .content .box-container .box p {
-    margin-bottom: 0.5rem;
-    font-size: 1rem;
-    font-weight: 500;
-}
-
-.about .row .content .box-container .box p span {
-    font-weight: 700;
-    color: #2c3e50;
-}
-
-.about .row .content .resumebtn {
-    margin-top: 1rem;
-}
-
 /* work section starts */
 .work{
   /* background: #010124; */
@@ -373,5 +252,102 @@ header .navbar ul li a:hover{
 }
 .work .desc .btns{
   display: flex;
-  justify-content: space
+  justify-content: space-between;
+  width: 100%;
+  margin-top: 2rem;
+}
+.work .desc .btns .btn{
+  line-height: 0;
+  display: inline;
+  padding: 1.5rem 2.5rem;
+  border-radius: .5rem;
+  font-size: 1.5rem;
+  color: #fff;
+  background: rgb(12, 12, 12);
+  margin-right: 2rem;
+}
+.work .desc .btns .btn:hover{
+  background: #310ae0f5;
+}
 
+@media screen and (max-width: 450px) {
+  .work .button-group{
+    width: 100%;
+  }
+  .work .box-container{
+    margin: 0rem;
+  }
+  .work .box-container .grid-item .box{
+    width: 95% !important;
+  }
+}
+
+/* back to home button */
+.backbtn{
+  display: flex;
+  justify-content: center;
+  margin-bottom: 2rem;
+  margin-top: 4rem;
+}
+.backbtn .btn {
+  position: relative;
+  line-height: 0;
+  padding: 1.6rem 3rem;
+  border-radius: .5em;
+  transition: 0.3s;
+  color: #fff;
+  border: 2px solid #fff;
+  box-shadow: 0px 2px 4px rgba(48, 68, 247, .3);
+  text-align: center;
+}
+.backbtn .btn span {
+  font-weight: 600;
+  font-size: 1.7rem;
+  font-family: 'Nunito', sans-serif;
+}
+.backbtn .btn i {
+  margin-right: 0.5rem;
+  font-size: 1.5rem;
+  transition: 0.3s;
+}
+.backbtn .btn:hover{
+  background: #ffffff;
+  color: #000;
+}
+.backbtn .btn:hover i {
+  transform: translateX(-8px);
+}
+/* work section ends */
+
+/* common media queries starts*/
+@media(max-width:450px){
+  html{
+    font-size: 55%;
+  }
+  body{
+    padding-right: 0;
+  }
+  section{
+    padding: 2rem;
+  }
+}
+/* common media queries ends*/
+
+
+/* scroll top starts */
+#scroll-top{
+  position: fixed;
+  top: -140%;
+  right: 2rem;
+  padding: 1rem 1.5rem;
+  font-size: 2rem;
+  background: #ffae00;
+  color: rgb(13, 0, 44);
+  border-radius: 5rem;
+  transition: 1s linear;
+  z-index: 1000;
+}
+#scroll-top.active{
+  top: calc(100% - 12rem);
+}
+/* scroll top ends */

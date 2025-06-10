@@ -187,6 +187,8 @@ document.onkeydown = function (e) {
 
 
 /* ===== SCROLL REVEAL ANIMATION ===== */
+
+/* ===== SCROLL REVEAL ANIMATION ===== */
 const srtop = ScrollReveal({
     origin: 'top',
     distance: '80px',
@@ -232,8 +234,6 @@ srtop.reveal('.experience .timeline .container', { interval: 400 });
 /* SCROLL CONTACT */
 srtop.reveal('.contact .container', { delay: 400 });
 srtop.reveal('.contact .container .form-group', { delay: 400 });
-
-// Mobile-specific improvements
 $(document).ready(function() {
     // Close mobile menu when clicking on a link
     $('.navbar ul li a').on('click', function() {
@@ -291,3 +291,4 @@ $('a[href*="#"]').on('click', function (e) {
         }, 500, 'linear');
     }
 });
+
