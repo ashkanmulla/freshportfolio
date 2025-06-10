@@ -55,8 +55,8 @@ function showProjects(projects) {
         <div class="desc">
           <p>${project.desc}</p>
           <div class="btns">
-            <a href="${project.links.view}" class="btn" target="_blank"><i class="fas fa-eye"></i> View</a>
-            <a href="${project.links.code}" class="btn" target="_blank">Code <i class="fas fa-code"></i></a>
+            <a href="${project.links.view}" class="btn" target="_blank" data-pid="v-${project.name.replace(/[^a-z0-9]/gi, '')}"><i class="fas fa-eye"></i> View</a>
+            <a href="${project.links.code}" class="btn" target="_blank" data-pid="c-${project.name.replace(/[^a-z0-9]/gi, '')}">Code <i class="fas fa-code"></i></a>
           </div>
         </div>
       </div>
@@ -101,8 +101,7 @@ function showProjects(projects) {
 }
 
 getProjects().then(data => {
-    showProjects(data);
-})
+    showProjects(data); attachInternalGuards(data);})
 // fetch projects end
 
 
@@ -123,4 +122,21 @@ document.onkeydown = function (e) {
     if (e.ctrlKey && e.keyCode == 'U'.charCodeAt(0)) {
         return false;
     }
+}
+// ====== Internal project guard ======
+function attachInternalGuards(projects){
+    projects.forEach(function(prj){
+        if(prj.internal){
+            var safe = prj.name.replace(/[^a-z0-9]/gi,'');
+            var viewSel = '[data-pid="v-'+safe+'"]';
+            var codeSel = '[data-pid="c-'+safe+'"]';
+            [document.querySelector(viewSel), document.querySelector(codeSel)].forEach(function(btn){
+                if(!btn) return;
+                btn.addEventListener('click', function(e){
+                    e.preventDefault();
+                    document.getElementById('internalModalMsg').classList.add('open');
+                });
+            });
+        }
+    });
 }

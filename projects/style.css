@@ -351,3 +351,9 @@ header .navbar ul li a:hover{
   top: calc(100% - 12rem);
 }
 /* scroll top ends */
+/* --- Modal for internal projects --- */
+.modal{position:fixed;inset:0;display:none;align-items:center;justify-content:center;background:rgba(0,0,0,0.7);z-index:9999;}
+.modal.open{display:flex;}
+.modal-box{background:#fff;border-radius:8px;padding:2rem;max-width:90%;text-align:center;font-family:inherit;}
+.modal-box h3{margin-bottom:0.8rem;color:#8a2be2;font-size:1.6rem;}
+.modal-box button{margin-top:1rem;padding:0.6rem 1.4rem;border:none;border-radius:6px;background:#8a2be2;color:#fff;font-size:1rem;cursor:pointer;}

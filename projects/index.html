@@ -96,5 +96,23 @@
 
 <script src="./script.js"></script>
 
+
+<!-- INTERNAL PROJECT MODAL -->
+<div id="internalModalMsg" class="modal">
+  <div class="modal-box">
+    <h3>Code Access Restricted</h3>
+    <p>
+      Sorry! This project is company-internal intellectual property.<br>
+      Sharing source code publicly would violate policy &amp; compliance guidelines.<br>
+      I can arrange a screen‑share walkthrough under NDA if needed.
+    </p>
+    <button id="closeInternalModal">OK, understood</button>
+  </div>
+</div>
+<script>
+  document.getElementById('closeInternalModal')?.addEventListener('click', () =>
+    document.getElementById('internalModalMsg')?.classList.remove('open'));
+</script>
+
 </body>
 </html>
