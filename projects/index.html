@@ -7,14 +7,14 @@
     <link rel="stylesheet" href="./style.css">
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link id='favicon' rel="shortcut icon" href="/assets/images/favicon.jpeg" type="image/x-jpeg">
+    <link id='hero' rel="shortcut icon" href="/assets/images/hero.jpeg" type="image/x-jpeg">
     <title>Projects | Portfolio Askan Mulla</title>
 </head>
 <body oncontextmenu="return false">
 
 <!-- navbar starts -->
 <header>
-        <a href="/" class="logo"><i class="fab fa-node-js"></i> Askan</a>
+        <a href="/" class="logo"><i class="fab fa-python"></i> Askan Mulla</a>
 
         <div id="menu" class="fas fa-bars"></div>
         <nav class="navbar">
@@ -102,16 +102,17 @@
   <div class="modal-box">
     <h3>Code Access Restricted</h3>
     <p>
-      Sorry! This project is company-internal intellectual property.<br>
-      Sharing source code publicly would violate policy &amp; compliance guidelines.<br>
-      I can arrange a screen‑share walkthrough under NDA if needed.
+      <h4>Thank you for your interest! Due to enterprise client confidentiality agreements,<br>
+      I cannot share the source code publicly and I'd be delighted to discuss<br><h4>
+      the technical implementation, architecture, and my contributions during our conversation! <br>
     </p>
     <button id="closeInternalModal">OK, understood</button>
   </div>
 </div>
 <script>
-  document.getElementById('closeInternalModal')?.addEventListener('click', () =>
-    document.getElementById('internalModalMsg')?.classList.remove('open'));
+  document.getElementById('closeInternalModal')?.addEventListener('click', () => {
+    document.getElementById('internalModalMsg')?.classList.remove('open');
+  });
 </script>
 
 </body>

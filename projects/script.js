@@ -21,11 +21,11 @@ document.addEventListener('visibilitychange',
     function () {
         if (document.visibilityState === "visible") {
             document.title = "Projects | Portfolio Askan Mulla";
-            $("#favicon").attr("href", "/assets/images/favicon.png");
+            $("#hero").attr("href", "/assets/images/hero.png");
         }
         else {
             document.title = "Come Back To Portfolio";
-            $("#favicon").attr("href", "/assets/images/favhand.png");
+            $("#hero").attr("href", "/assets/images/hero.png");
         }
     });
 
@@ -101,7 +101,8 @@ function showProjects(projects) {
 }
 
 getProjects().then(data => {
-    showProjects(data); attachInternalGuards(data);})
+    showProjects(data); attachInternalGuardsProjects(data);
+})
 // fetch projects end
 
 
@@ -123,20 +124,21 @@ document.onkeydown = function (e) {
         return false;
     }
 }
-// ====== Internal project guard ======
-function attachInternalGuards(projects){
-    projects.forEach(function(prj){
-        if(prj.internal){
-            var safe = prj.name.replace(/[^a-z0-9]/gi,'');
-            var viewSel = '[data-pid="v-'+safe+'"]';
-            var codeSel = '[data-pid="c-'+safe+'"]';
-            [document.querySelector(viewSel), document.querySelector(codeSel)].forEach(function(btn){
-                if(!btn) return;
-                btn.addEventListener('click', function(e){
-                    e.preventDefault();
-                    document.getElementById('internalModalMsg').classList.add('open');
-                });
-            });
+
+// === Internal-project guard : View‑All page ===
+function attachInternalGuardsProjects(projects){
+  projects.forEach(prj=>{
+    if(prj.internal){
+      const safe=prj.name.replace(/[^a-z0-9]/gi,'');
+      ['v-'+safe,'c-'+safe].forEach(key=>{
+        const btn=document.querySelector('[data-pid="'+key+'"]');
+        if(btn){
+          btn.addEventListener('click',e=>{
+            e.preventDefault();
+            document.getElementById('internalModalMsg').classList.add('open');
+          });
         }
-    });
+      });
+    }
+  });
 }

@@ -2784,3 +2784,22 @@ body, html {
     font-size: 1.2rem;
   }
 }
+
+/* === Internal Project Modal === */
+.modal{position:fixed;inset:0;display:none;align-items:center;justify-content:center;background:rgba(0,0,0,0.7);z-index:9999;}
+.modal.open{display:flex;}
+.modal-box{background:#fff;border-radius:8px;padding:2rem;max-width:90%;text-align:center;font-family:inherit;}
+.modal-box h3{margin-bottom:.8rem;color:#8a2be2;font-size:1.6rem;}
+.modal-box button{margin-top:1rem;padding:.6rem 1.4rem;border:none;border-radius:6px;background:#8a2be2;color:#fff;font-size:1rem;cursor:pointer;}
+
+
+/* === Mobile ≤768px tweaks === */
+@media(max-width:768px){
+  .about .row{flex-direction:column;align-items:center;text-align:center;}
+  .box-container{display:block;}
+  .box,.grid-item{width:100%!important;margin:0 0 1.2rem 0!important;}
+  header nav{display:none;}
+  header nav.open{display:block;position:absolute;top:100%;left:0;width:100%;background:#fff;box-shadow:0 2px 10px #0002;}
+  header nav ul{flex-direction:column;align-items:center;}
+  header nav li{margin:1rem 0;}
+}

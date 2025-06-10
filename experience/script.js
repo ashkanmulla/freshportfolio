@@ -55,10 +55,10 @@ document.addEventListener('visibilitychange',
 function(){
     if(document.visibilityState === "visible"){
         document.title = "Experience | Portfolio Askan Mulla";
-        $("#favicon").attr("href","/assets/images/favicon.jpeg");
+        $("#hero").attr("href","/assets/images/hero.jpeg");
     }
     else {
         document.title = "Come Back To Portfolio";
-        $("#favicon").attr("href","/assets/images/favhand.jpeg");
+        $("#hero").attr("href","/assets/images/hero.jpeg");
     }
 });

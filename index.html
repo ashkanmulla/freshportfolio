@@ -14,8 +14,8 @@
 
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <!-- Favicon -->
-    <link id='favicon' rel="shortcut icon" href="./assets/images/favicon.jpeg" type="image/x-png">
+    <!-- hero -->
+    <link id='hero' rel="shortcut icon" href="./assets/images/hero.jpeg" type="image/x-png">
     <title>Portfolio | Askan Mulla</title>
 </head>
 <body oncontextmenu="return false">
@@ -105,10 +105,10 @@
                     </div>
                     
                     <p class="bio">
-                        Results-driven Senior Data Scientist with <span class="highlight">8+ years</span> of experience architecting enterprise-scale Generative AI solutions and leading high-performance ML teams.<br>
-                        Proven expertise in deploying production RAG (Retrieval Augmented Generation) systems, fine-tuning Large Language Models (LLMs), and implementing end-to-end MLOps pipelines that delivered 40% operational efficiency gains.<br>
-                        <span class="highlight">AWS Certified Machine Learning Engineer</span> with demonstrated success in translating complex business requirements into scalable AI solutions using LangChain, Vector Databases, and cloud-native architectures.<br>
-                        Expert in stakeholder management and cross-functional collaboration, having led teams of 6+ data scientists while managing $3M+ project portfolios.<br>
+                        Results-driven Senior Data Scientist with <span class="highlight">8+ years</span>  architecting enterprise-scale GenAI solutions and leading high-performance ML teams.<br>
+                        Proven expertise in production RAG systems, LLM fine-tuning, and end-to-end MLOps pipelines delivering 40% operational efficiency gains.<br>
+                        <span class="highlight">AWS Certified Machine Learning Engineer</span> with demonstrated success translating complex business requirements into scalable AI solutions using LangChain, Vector Databases, and cloud-native architectures.<br>
+                        Expert in stakeholder management and cross-functional collaboration, having led 6+ data scientists while managing $3M+ project portfolios.<br>
 
                         <b class="tagline">Let's transform your ideas into intelligent reality!</b>
                     </p>
@@ -389,8 +389,7 @@
             <img src="./assets/images/hero.png" alt="AI Assistant">
           </div>
           <div class="chat-info">
-            <h3>AI Assistant</h3>
-            
+            <h3>RAG-Powered Portfolio Agent</h3>
             <span class="status"><i class="fas fa-circle"></i> Online</span>
           </div>
         </div>
@@ -401,7 +400,7 @@
       <div class="chat-messages" id="chatMessages">
         <!-- Predefined Questions Section -->
         <div class="predefined-questions">
-          <h1>Quick Questions</h1>
+          <h2>Quick Questions</h2>
           <div class="questions-grid">
             <button class="question-chip" onclick="selectQuestion('Can you summarize your professional experience?')">
               </i> Can you summarize your professional experience?
@@ -428,8 +427,9 @@
               </i> What is your approach to continuous learning?
             </button>
             <button class="question-chip" onclick="selectQuestion('Describe your management style with junior data scientists?')">
-              </i> Describe your management style with junior data scientists.
-             <button class="question-chip" onclick="selectQuestion('What makes you different from other candidates?')">
+              </i> Describe your management style with junior data scientists?
+            </button>
+            <button class="question-chip" onclick="selectQuestion('What makes you different from other candidates?')">
               </i> What makes you different from other candidates?
             </button>
           </div>
@@ -440,7 +440,7 @@
             <img src="./assets/images/hero.png" alt="Bot">
           </div>
           <div class="message-content">
-            <p>Hello! 👋 I'm here to help you. Feel free to ask me anything!</p>
+            <p>Hello!👋I'm Ashkan's AI assistant. Feel free to ask me anything!</p>
             <span class="message-time">Just now</span>
           </div>
         </div>
@@ -899,21 +899,27 @@
       "What are your career goals for the next 5 years?": "I aim to transition into a Chief AI Officer or VP of AI role, leading enterprise-wide AI strategy and transformation initiatives. I want to build and scale AI Centers of Excellence that democratize AI across organizations while ensuring responsible AI practices. Additionally, I plan to contribute to the AI community through open-source projects, speaking at major conferences, and mentoring the next generation of AI leaders.",
       "What technologies and tools do you specialize in?": "I specialize in Large Language Models (GPT-4, Claude 3.5, Gemini), RAG architectures using LangChain and vector databases (Pinecone, Weaviate), and production ML deployment on AWS/Azure. My core expertise includes fine-tuning LLMs using LoRA/QLoRA, building multi-agent systems, and implementing MLOps pipelines with Docker, Kubernetes, and CI/CD. I'm also proficient in deep learning frameworks (PyTorch, TensorFlow), big data technologies (Spark, Databricks), and have extensive experience with NLP, computer vision, and time-series forecasting.",
       "How do you handle tight deadlines or pressure?": "I thrive under pressure by breaking complex projects into manageable sprints and prioritizing high-impact deliverables using agile methodologies. I maintain clear communication with stakeholders about realistic timelines and potential trade-offs, while leveraging my team's strengths through effective delegation. My experience delivering the LANXESS RAG chatbot in record time taught me that combining technical excellence with pragmatic decision-making and team collaboration is key to meeting aggressive deadlines.",
-      "How do you stay updated with the latest AI and data science trends?": "I approach conflicts as opportunities for growth by first actively listening to understand all perspectives without judgment. I focus on finding common ground and data-driven solutions that align with organizational objectives rather than personal preferences. In my role at LTIMindtree, I successfully mediated between engineering and business teams by creating shared KPIs and establishing clear communication protocols, turning potential friction into productive collaboration.",
+      "How do you stay updated with the latest AI and data science trends?": "I dedicate 5-10 hours weekly to continuous learning through research papers on arXiv, following key AI researchers on social media, and experimenting with new models on personal projects. I'm an active contributor to LangChain and Hugging Face communities with 50+ merged PRs, participate in Kaggle competitions, and attend conferences like NeurIPS virtually. I also maintain a technical blog and organize Mumbai Data Science Meetup with 1000+ members to foster knowledge sharing.",
       "How do you handle conflicts in the workplace?": "I approach conflicts as opportunities for growth by first actively listening to understand all perspectives without judgment. I focus on finding common ground and data-driven solutions that align with organizational objectives rather than personal preferences. In my role at LTIMindtree, I successfully mediated between engineering and business teams by creating shared KPIs and establishing clear communication protocols, turning potential friction into productive collaboration.",
       "What is your approach to continuous learning?": "I follow a structured 70-20-10 approach: 70% hands-on experimentation with new technologies in sandbox environments, 20% formal learning through certifications (completed 6 major certifications), and 10% knowledge sharing through conference talks and mentoring. I maintain a learning roadmap aligned with industry trends and dedicate weekends to deep-dive into emerging areas like GraphRAG and multi-agent systems. This approach helped me stay ahead of the GenAI curve and lead successful implementations.",
       "Describe your management style with junior data scientists?": "I believe in servant leadership, focusing on removing blockers and empowering team members to reach their full potential through mentorship and hands-on guidance. I establish clear expectations, provide regular constructive feedback, and create psychological safety for experimentation and learning from failures. At LTIMindtree, I implemented pair programming sessions and knowledge-sharing workshops that improved team productivity by 40% while developing 3 junior members into senior roles within 18 months.",
-      "What makes you different from other candidates?": "My unique combination of deep technical expertise in cutting-edge GenAI technologies, proven business acumen with $10M+ cumulative impact, and leadership experience scaling AI teams sets me apart. Unlike pure technologists, I bridge the gap between complex AI capabilities and business value. My active open-source contributions, conference speaking, and AWS ML certification demonstrate both technical depth and commitment to the AI community's growth.",                            
+      "What makes you different from other candidates?": "My unique combination of deep technical expertise in cutting-edge GenAI technologies, proven business acumen with $10M+ cumulative impact, and leadership experience scaling AI teams sets me apart. Unlike pure technologists, I bridge the gap between complex AI capabilities and business value. My active open-source contributions, conference speaking, and AWS ML certification demonstrate both technical depth and commitment to the AI community's growth.",
+               
       "Have you ever missed deadline? How did you handle it?": "Yes, during a complex multi-modal AI project at ICICI Lombard, we encountered unexpected data quality issues that risked a 2-week delay. I immediately communicated with stakeholders, presented a revised timeline with mitigation strategies, and mobilized additional resources. We delivered a phased approach, providing core functionality on time while completing advanced features in the subsequent sprint, ultimately exceeding client expectations through transparent communication and adaptive planning."
     };
 
+    
+
     // Bot responses (you can replace with actual API calls)
     const botResponses = [
-      "That's an interesting question! Let me think about it...",
-      "I'd be happy to help you with that!",
-      "Could you provide more details about what you're looking for?",
-      "Based on what you've told me, I suggest...",
-      "That's a great point! Here's what I think..."
+      "I'm specifically trained on Ashkan's professional experience and skills. Feel free to ask about his AI projects, work experience, or technical expertise!",
+      "I'd love to help! I can answer questions about Ashkan's career journey, technical skills, projects, or educational background. What would you like to know?",
+      "I'm here to share information about Ashkan's professional profile. Try asking about his experience with LLMs, RAG systems, or his role at LANXESS!",
+      "While I'm focused on Ashkan's professional background, I'd be happy to discuss his 8+ years in AI/ML, project portfolio, or technical certifications!",
+      "I specialize in answering questions about Ashkan's work. You can ask about his experience with Generative AI, team leadership, or specific projects!",
+      "I'm your guide to Ashkan's professional journey! Ask me about his skills in LangChain, MLOps, or his experience in fintech and chemical industries.",
+      "Let me help you learn about Ashkan's expertise! I can share details about his AI implementations, open-source contributions, or career achievements.",
+      "I'm trained on Ashkan's resume and projects. Would you like to know about his experience with GPT-4, Claude, or his work in production AI systems?"
     ];
 
     // User avatar (you can replace with actual user image)
@@ -1205,6 +1211,25 @@ $('a[href="#chatbot"]').on('click', function(e){
 
 
 
+
+
+<!-- INTERNAL PROJECT MODAL -->
+<div id="internalModalMsg" class="modal">
+  <div class="modal-box">
+    <h3>Code Access Restricted</h3>
+    <p>
+      <h4>Thank you for your interest! Due to enterprise client confidentiality agreements,<br>
+      I cannot share the source code publicly and I'd be delighted to discuss<br><h4>
+      the technical implementation, architecture, and my contributions during our conversation! <br>
+    </p>
+    <button id="closeInternalModal">OK, understood</button>
+  </div>
+</div>
+<script>
+  document.getElementById('closeInternalModal')?.addEventListener('click', () => {
+    document.getElementById('internalModalMsg')?.classList.remove('open');
+  });
+</script>
 
 </body>
 <!-- Elfsight AI Chatbot | Untitled AI Chatbot -->

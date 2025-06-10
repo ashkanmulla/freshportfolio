@@ -29,7 +29,8 @@
     "links": {
       "view": "https://www.linkedin.com/posts/ashkanmulla_androiddev-androidstudio-java-activity-6955224473822199808-JT0j",
       "code": "https://github.com/ashkanmulla/notystack-android"
-    }
+    },
+    "internal": true
   },
   {
     "name": "Multiple document QA Chatbot",
@@ -39,7 +40,8 @@
     "links": {
       "view": "https://www.linkedin.com/posts/ashkanmulla_androiddev-androidstudio-java-activity-6955224473822199808-JT0j",
       "code": "https://github.com/ashkanmulla/sppu-prep-android"
-    }
+    },
+    "internal": true
   },
   {
     "name": "AI Chatbot For Financial Reports",
@@ -49,7 +51,8 @@
     "links": {
       "view": "https://www.linkedin.com/posts/ashkanmulla_androiddev-androidstudio-java-activity-6955224473822199808-JT0j",
       "code": "https://github.com/ashkanmulla/newsbox-android"
-    }
+    },
+    "internal": true
   },
   {
     "name": "GraphRAG Pro Chatbot with History",
@@ -59,7 +62,8 @@
     "links": {
       "view": "https://www.linkedin.com/posts/ashkanmulla_androiddev-androidstudio-java-activity-6955224473822199808-JT0j",
       "code": "https://github.com/ashkanmulla/weatherly-android"
-    }
+    },
+    "internal": true
   },
   {
     "name": "Privacy Focused Insurance RAG Chatbot",
@@ -69,7 +73,8 @@
     "links": {
       "view": "https://flipkartwebs.herokuapp.com/",
       "code": "https://github.com/ashkanmulla/flipkart-mern"
-    }
+    },
+    "internal": true
   },
   {
     "name": "Hybrid Recommender System ",
@@ -79,7 +84,8 @@
     "links": {
       "view": "https://resumegenx.netlify.app/",
       "code": "https://github.com/ashkanmulla/resumegen"
-    }
+    },
+    "internal": true
   },
   {
     "name": "Lead Scoring Predictive Model",
@@ -89,7 +95,8 @@
     "links": {
       "view": "https://reactjsprojects.herokuapp.com/",
       "code": "https://github.com/ashkanmulla/React-Projects"
-    }
+    },
+    "internal": true
   },
   {
     "name": "Azure OpenAI + OCR: Extraction Information from Images and PDF's",
@@ -99,7 +106,8 @@
     "links": {
       "view": "https://github.com/ashkanmulla/Flipkart-Clone-PHP",
       "code": "https://github.com/ashkanmulla/Flipkart-Clone-PHP"
-    }
+    },
+    "internal": true
   },
   {
     "name": "Gen AI for vision Aadhar and PAN Card KYC Using Computer Vision",
@@ -109,7 +117,8 @@
     "links": {
       "view": "https://ashkanmulla.github.io/JavaScript-Projects",
       "code": "https://github.com/ashkanmulla/JavaScript-Projects"
-    }
+    },
+    "internal": true
   },
   {
     "name": "RAG Based Financial Chatbot",
@@ -119,7 +128,8 @@
     "links": {
       "view": "https://github.com/ashkanmulla/web-ui-clones",
       "code": "https://github.com/ashkanmulla/web-ui-clones"
-    }
+    },
+    "internal": true
   },
   {
     "name": "OCR-Invoice Data Extraction",
@@ -129,7 +139,8 @@
     "links": {
       "view": "https://crypto-tracker-react-project.netlify.app/",
       "code": "https://github.com/ashkanmulla/React-Projects/tree/main/crypto-tracker"
-    }
+    },
+    "internal": true
   },
   {
     "name": "Credit Card Fraud Detection",
@@ -139,7 +150,8 @@
     "links": {
       "view": "https://hulu-clone-ashkanmulla.vercel.app/",
       "code": "https://github.com/ashkanmulla/React-Projects/tree/main/hulu-clone"
-    }
+    },
+    "internal": true
   },
   {
     "name": "Multi-Lingual Voice RAG Chatbot",
@@ -149,7 +161,8 @@
     "links": {
       "view": "#",
       "code": "https://github.com/ashkanmulla/Portfolio-Website"
-    }
+    },
+    "internal": true
   },
   {
     "name": "Realtime RAG Chatbot For Finance",
@@ -159,7 +172,8 @@
     "links": {
       "view": "https://composey.netlify.app/",
       "code": "https://github.com/ashkanmulla/LGMVIP-WebDev"
-    }
+    },
+    "internal": true
   },
   {
     "name": "Database ChatBot-ICICI Lombard",
@@ -169,7 +183,8 @@
     "links": {
       "view": "https://github.com/ashkanmulla/Android-Webview#webapp--android-webview-app",
       "code": "https://github.com/ashkanmulla/Android-Webview"
-    }
+    },
+    "internal": true
   },
   {
     "name": "Bank Statement Analysze-5 Paisa",
@@ -179,7 +194,8 @@
     "links": {
       "view": "https://tsfbank.rf.gd",
       "code": "https://github.com/ashkanmulla/TSF-Bank"
-    }
+    },
+    "internal": true
   },
   {
     "name": "NLP to SQL-Fine tuning a T5 Model",
@@ -189,7 +205,8 @@
     "links": {
       "view": "#",
       "code": "#"
-    }
+    },
+    "internal": true
   },
   {
     "name": "Customer Segmentation RFM Analysis",
@@ -199,7 +216,8 @@
     "links": {
       "view": "#",
       "code": "#"
-    }
+    },
+    "internal": true
   },
   {
     "name": "Gold Price Prediction-Time Series",
@@ -209,7 +227,8 @@
     "links": {
       "view": "#",
       "code": "#"
-    }
+    },
+    "internal": true
   },
   {
     "name": "Anomaly Detection Using ML",
@@ -219,7 +238,8 @@
     "links": {
       "view": "#",
       "code": "#"
-    }
+    },
+    "internal": true
   },
   {
     "name": "Bank Customer Churn Prdiction",
@@ -229,7 +249,8 @@
     "links": {
       "view": "https://github.com/ashkanmulla/WebChat#webchat",
       "code": "https://github.com/ashkanmulla/WebChat"
-    }
+    },
+    "internal": true
   },
   {
     "name": "Face Recognition System",
@@ -239,7 +260,8 @@
     "links": {
       "view": "https://github.com/ashkanmulla/Basic_Banking_App#basic-banking-app",
       "code": "https://github.com/ashkanmulla/Basic_Banking_App"
-    }
+    },
+    "internal": true
   },
   {
     "name": "Credit Risk Modeling",
@@ -249,7 +271,8 @@
     "links": {
       "view": "https://ashkanmulla.github.io/JavaScript-Projects/projects/issuetracker",
       "code": "https://github.com/ashkanmulla/JavaScript-Projects/tree/main/projects/issuetracker"
-    }
+    },
+    "internal": true
   },
   {
     "name": "ekyc using computer vision",
@@ -259,7 +282,8 @@
     "links": {
       "view": "https://github.com/ashkanmulla/PHP-Projects/tree/main/pblform#pbl-portal",
       "code": "https://github.com/ashkanmulla/PHP-Projects/tree/main/pblform"
-    }
+    },
+    "internal": true
   },
   {
     "name": "Time Series Forecasting Model",
@@ -269,7 +293,8 @@
     "links": {
       "view": "https://github.com/ashkanmulla/Flipkart-Clone-PHP",
       "code": "https://github.com/ashkanmulla/Flipkart-Clone-PHP"
-    }
+    },
+    "internal": true
   },
   {
     "name": "Youtube Video Summarization",
@@ -279,7 +304,8 @@
     "links": {
       "view": "https://ashkanmulla.github.io/JavaScript-Projects/api-projects/saas-jobs",
       "code": "https://github.com/ashkanmulla/JavaScript-Projects/tree/main/api-projects/saas-jobs"
-    }
+    },
+    "internal": true
   },
   {
     "name": "LangGraph Expense Tracker",
@@ -289,7 +315,8 @@
     "links": {
       "view": "#",
       "code": "#"
-    }
+    },
+    "internal": true
   },
   {
     "name": "Build AI Agent for Legal Document",
@@ -299,7 +326,8 @@
     "links": {
       "view": "#",
       "code": "#"
-    }
+    },
+    "internal": true
   },
   {
     "name": "KIA Info Website",
@@ -309,7 +337,8 @@
     "links": {
       "view": "#",
       "code": "#"
-    }
+    },
+    "internal": true
   },
   {
     "name": "Burger Shop Dummy",
@@ -319,7 +348,8 @@
     "links": {
       "view": "#",
       "code": "#"
-    }
+    },
+    "internal": true
   },
   {
     "name": "Indian Temples",
@@ -329,7 +359,8 @@
     "links": {
       "view": "#",
       "code": "#"
-    }
+    },
+    "internal": true
   },
   {
     "name": "Indian Temples",
@@ -339,7 +370,8 @@
     "links": {
       "view": "#",
       "code": "#"
-    }
+    },
+    "internal": true
   },
   {
     "name": "Indian Temples",
@@ -349,6 +381,7 @@
     "links": {
       "view": "#",
       "code": "#"
-    }
+    },
+    "internal": true
   }
 ]

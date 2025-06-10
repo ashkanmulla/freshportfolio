@@ -53,11 +53,11 @@ document.addEventListener('visibilitychange',
     function () {
         if (document.visibilityState === "visible") {
             document.title = "Portfolio | Askan Mulla";
-            $("#favicon").attr("href", "assets/images/favicon.jpeg");
+            $("#hero").attr("href", "assets/images/hero.jpeg");
         }
         else {
             document.title = "Come Back To Portfolio";
-            $("#favicon").attr("href", "assets/images/favhand.png");
+            $("#hero").attr("href", "assets/images/hero.png");
         }
     });
 
@@ -111,8 +111,8 @@ function showProjects(projects) {
         <div class="desc">
           <p>${project.desc}</p>
           <div class="btns">
-            <a href="${project.links.view}" class="btn" target="_blank"><i class="fas fa-eye"></i> View</a>
-            <a href="${project.links.code}" class="btn" target="_blank">Code <i class="fas fa-code"></i></a>
+            <a href="${project.links.view}" class="btn" target="_blank" data-pid="v-${project.name.replace(/[^a-z0-9]/gi, '')}"><i class="fas fa-eye"></i> View</a>
+            <a href="${project.links.code}" class="btn" target="_blank" data-pid="c-${project.name.replace(/[^a-z0-9]/gi, '')}">Code <i class="fas fa-code"></i></a>
           </div>
         </div>
       </div>
@@ -144,7 +144,7 @@ fetchData().then(data => {
 });
 
 fetchData("projects").then(data => {
-    showProjects(data);
+    showProjects(data); attachInternalGuardsHome(data);
 });
 
 // <!-- tilt js effect starts -->
@@ -292,3 +292,22 @@ $('a[href*="#"]').on('click', function (e) {
     }
 });
 
+
+
+// === Internal-project guard : Home page ===
+function attachInternalGuardsHome(projects){
+  projects.forEach(prj=>{
+    if(prj.internal){
+      const safe = prj.name.replace(/[^a-z0-9]/gi,'');
+      ['v-'+safe,'c-'+safe].forEach(key=>{
+        const btn=document.querySelector('[data-pid="'+key+'"]');
+        if(btn){
+          btn.addEventListener('click',e=>{
+            e.preventDefault();
+            document.getElementById('internalModalMsg').classList.add('open');
+          });
+        }
+      });
+    }
+  });
+}
