@@ -1,16 +1,5 @@
 [
   {
-    "name": "XChat Lanxess AI Chatbot",
-    "desc": "• Secure enterprise bot that answers MSDS / SOP questions for chemists using retrieval-augmented generation (RAG) and LangChain.",
-    "image": "xchat",
-    "category": "mern",
-    "links": {
-      "view": "https://instagramernstack.herokuapp.com/",
-      "code": "https://github.com/ashkanmulla/instagram-mern"
-    },
-    "internal": true
-  },
-  {
     "name": "RAG Based Web Search AI Chatbot",
     "desc": "AI Chatbot built using ReactJS and OpenAI API. Provides chat interface with AI.",
     "image": "instagrammern",
@@ -54,6 +43,7 @@
     },
     "internal": true
   },
+
   {
     "name": "GraphRAG Pro Chatbot with History",
     "desc": "Native android app built using Java, XML and Volley dependencies. Provides weather forecast.",
@@ -238,6 +228,17 @@
     "links": {
       "view": "#",
       "code": "#"
+    },
+    "internal": true
+  },
+  {
+    "name": "XChat Lanxess AI Chatbot",
+    "desc": "• Secure enterprise bot that answers MSDS / SOP questions for chemists using retrieval-augmented generation (RAG) and LangChain.",
+    "image": "xchat",
+    "category": "mern",
+    "links": {
+      "view": "https://instagramernstack.herokuapp.com/",
+      "code": "https://github.com/ashkanmulla/instagram-mern"
     },
     "internal": true
   },

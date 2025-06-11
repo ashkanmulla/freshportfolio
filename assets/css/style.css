@@ -2803,3 +2803,95 @@ body, html {
   header nav ul{flex-direction:column;align-items:center;}
   header nav li{margin:1rem 0;}
 }
+
+/* ====== COMMON MOBILE RESET ====== */
+@media (max-width: 768px) {
+  html, body {
+    font-size: 55% !important;
+    overflow-x: hidden !important;
+    max-width: 100vw;
+    width: 100vw;
+  }
+  section {
+    padding: 2.5rem 1rem !important;
+    max-width: 100vw;
+    overflow-x: hidden;
+  }
+  img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+  }
+}
+
+/* ====== NAVBAR ====== */
+@media (max-width: 768px) {
+  header {
+    padding: 1rem 5%;
+    height: 6.5rem;
+  }
+  #menu {
+    display: block;
+  }
+  header .navbar {
+    position: fixed;
+    top: 6.5rem;
+    right: -120%;
+    width: 80vw;
+    height: 100vh;
+    background: #0e0f31;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    transition: right 0.3s;
+    z-index: 99;
+  }
+  header .navbar.nav-toggle {
+    right: 0;
+  }
+  header .navbar ul {
+    flex-direction: column;
+    width: 100%;
+    padding: 2rem 0;
+  }
+  header .navbar ul li {
+    width: 100%;
+    text-align: left;
+    margin: 1rem 0;
+  }
+  header .navbar ul li a {
+    color: #fff;
+    font-size: 2rem;
+    width: 100%;
+    display: block;
+    padding: 1rem 2rem;
+    border-radius: 0.5rem;
+  }
+  header .navbar ul li a.active,
+  header .navbar ul li a:hover {
+    background: #011aff;
+    color: #fff;
+  }
+}
+
+/* ====== HOME SECTION ====== */
+@media (max-width: 768px) {
+  .home {
+    flex-direction: column !important;
+    align-items: center;
+    justify-content: center;
+    min-height: 90vh !important;
+    padding: 8rem 1rem 2rem !important;
+    gap: 2rem;
+  }
+  .home .image img {
+    width: 170px !important;
+    margin: 0 auto !important;
+    display: block;
+  }
+  .home .content
+@media (max-width: 768px) {
+  .hide-mobile-after-tagline {
+    display: none !important;
+  }
+}
