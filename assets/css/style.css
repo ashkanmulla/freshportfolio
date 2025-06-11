@@ -2895,3 +2895,18 @@ body, html {
     display: none !important;
   }
 }
+@media (max-width: 768px) {
+  html, body {
+    overflow-x: hidden !important;
+    max-width: 100vw !important;
+  }
+  section {
+    max-width: 100vw !important;
+    overflow-x: hidden !important;
+  }
+  img, iframe {
+    max-width: 100% !important;
+    height: auto;
+    display: block;
+  }
+}
