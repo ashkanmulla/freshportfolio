@@ -20,7 +20,7 @@ $(document).ready(function () {
 document.addEventListener('visibilitychange',
     function () {
         if (document.visibilityState === "visible") {
-            document.title = "Projects | Portfolio Askan Mulla";
+            document.title = "Projects | Portfolio Mehjabeen Khan";
             $("#hero").attr("href", "/assets/images/hero.png");
         }
         else {

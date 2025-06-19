@@ -52,7 +52,7 @@ $(document).ready(function () {
 document.addEventListener('visibilitychange',
     function () {
         if (document.visibilityState === "visible") {
-            document.title = "Portfolio | Askan Mulla";
+            document.title = "Portfolio | Mehjabeen Khan";
             $("#hero").attr("href", "assets/images/hero.jpeg");
         }
         else {
@@ -164,7 +164,7 @@ VanillaTilt.init(document.querySelectorAll(".tilt"), {
 // window.onload = fadeOut;
 // pre loader end
 
-// diMulla developer mode
+// diKhan developer mode
 document.onkeydown = function (e) {
     if (e.keyCode == 123) {
         return false;

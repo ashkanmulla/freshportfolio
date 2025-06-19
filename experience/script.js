@@ -32,7 +32,7 @@ srtop.reveal('.experience .timeline .container',{interval: 400});
 
 
 
-// diMulla developer mode
+// diKhan developer mode
 document.onkeydown = function(e) {
   if(e.keyCode == 123) {
      return false;
@@ -54,7 +54,7 @@ document.onkeydown = function(e) {
 document.addEventListener('visibilitychange',
 function(){
     if(document.visibilityState === "visible"){
-        document.title = "Experience | Portfolio Askan Mulla";
+        document.title = "Experience | Portfolio Mehjabeen Khan";
         $("#hero").attr("href","/assets/images/hero.jpeg");
     }
     else {
